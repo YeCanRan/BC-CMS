@@ -45,11 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBasicConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBasicConsumption.Designer.cs">
+      <DependentUpon>FormBasicConsumption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBathPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBathPrice.Designer.cs">
+      <DependentUpon>FormBathPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEmployeeInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEmployeeInformation.Designer.cs">
       <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntryHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntryHandling.Designer.cs">
+      <DependentUpon>FormEntryHandling.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -62,6 +80,12 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMassagePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMassagePrice.Designer.cs">
+      <DependentUpon>FormMassagePrice.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMemberHandling.cs">
       <SubType>Form</SubType>
@@ -81,11 +105,29 @@
     <Compile Include="FormMemberRecharge.Designer.cs">
       <DependentUpon>FormMemberRecharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOvernightPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOvernightPrice.Designer.cs">
+      <DependentUpon>FormOvernightPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalaryHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalaryHandling.Designer.cs">
+      <DependentUpon>FormSalaryHandling.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSettleAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSettleAccounts.Designer.cs">
       <DependentUpon>FormSettleAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTeaPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeaPrice.Designer.cs">
+      <DependentUpon>FormTeaPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,14 +155,32 @@
     <Compile Include="UserControlRechargePriceList.Designer.cs">
       <DependentUpon>UserControlRechargePriceList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlSalaryRiseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalaryRiseList.Designer.cs">
+      <DependentUpon>UserControlSalaryRiseList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBasicConsumption.resx">
+      <DependentUpon>FormBasicConsumption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBathPrice.resx">
+      <DependentUpon>FormBathPrice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEmployeeInformation.resx">
       <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntryHandling.resx">
+      <DependentUpon>FormEntryHandling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMassagePrice.resx">
+      <DependentUpon>FormMassagePrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMemberHandling.resx">
       <DependentUpon>FormMemberHandling.cs</DependentUpon>
@@ -131,8 +191,17 @@
     <EmbeddedResource Include="FormMemberRecharge.resx">
       <DependentUpon>FormMemberRecharge.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOvernightPrice.resx">
+      <DependentUpon>FormOvernightPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalaryHandling.resx">
+      <DependentUpon>FormSalaryHandling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSettleAccounts.resx">
       <DependentUpon>FormSettleAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeaPrice.resx">
+      <DependentUpon>FormTeaPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlRechargePriceList.resx">
       <DependentUpon>UserControlRechargePriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalaryRiseList.resx">
+      <DependentUpon>UserControlSalaryRiseList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

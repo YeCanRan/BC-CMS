@@ -113,12 +113,12 @@ namespace 洗浴中心会员管理系统
 
         private void ButtonEntryHandling_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormEntryHandling());
         }
 
         private void ButtonSalaryHandling_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormSalaryHandling());
         }
 
         private void ButtonPriceManagement_Click(object sender, EventArgs e)
@@ -129,27 +129,27 @@ namespace 洗浴中心会员管理系统
 
         private void ButtonBasicConsumption_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormBasicConsumption());
         }
 
         private void ButtonBathPrice_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormBathPrice());
         }
 
         private void ButtonMassagePrice_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormMassagePrice());
         }
 
         private void ButtonTeaPrice_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormTeaPrice());
         }
 
         private void ButtonOvernightPrice_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormOvernightPrice());
         }
 
         private void ButtonMaterialManagement_Click(object sender, EventArgs e)

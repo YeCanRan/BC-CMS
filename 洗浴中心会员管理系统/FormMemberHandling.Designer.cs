@@ -51,7 +51,7 @@
             this.LabelHandleDate = new System.Windows.Forms.Label();
             this.TextBoxHandleDate = new System.Windows.Forms.TextBox();
             this.ButtonClear = new System.Windows.Forms.Button();
-            this.PanelHand = new System.Windows.Forms.Panel();
+            this.PanelHead = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // LabelName
@@ -324,14 +324,14 @@
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
             // 
-            // PanelHand
+            // PanelHead
             // 
-            this.PanelHand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.PanelHand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelHand.Location = new System.Drawing.Point(0, 0);
-            this.PanelHand.Name = "PanelHand";
-            this.PanelHand.Size = new System.Drawing.Size(1014, 100);
-            this.PanelHand.TabIndex = 5;
+            this.PanelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelHead.Location = new System.Drawing.Point(0, 0);
+            this.PanelHead.Name = "PanelHead";
+            this.PanelHead.Size = new System.Drawing.Size(1014, 100);
+            this.PanelHead.TabIndex = 5;
             // 
             // FormMemberHandling
             // 
@@ -340,7 +340,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1014, 681);
             this.Controls.Add(this.ButtonClear);
-            this.Controls.Add(this.PanelHand);
+            this.Controls.Add(this.PanelHead);
             this.Controls.Add(this.ButtonSubmit);
             this.Controls.Add(this.RadioButtonWoman);
             this.Controls.Add(this.RadioButtonMan);
@@ -396,6 +396,6 @@
         private System.Windows.Forms.Label LabelHandleDate;
         private System.Windows.Forms.TextBox TextBoxHandleDate;
         private System.Windows.Forms.Button ButtonClear;
-        private System.Windows.Forms.Panel PanelHand;
+        private System.Windows.Forms.Panel PanelHead;
     }
 }
