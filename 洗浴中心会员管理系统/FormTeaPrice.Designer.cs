@@ -29,16 +29,43 @@
         private void InitializeComponent()
         {
             this.PanelHead = new System.Windows.Forms.Panel();
+            this.ButtonSubmit = new System.Windows.Forms.Button();
+            this.PanelPriceList = new System.Windows.Forms.Panel();
+            this.PanelHead.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelHead
             // 
             this.PanelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.PanelHead.Controls.Add(this.ButtonSubmit);
             this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHead.Location = new System.Drawing.Point(0, 0);
             this.PanelHead.Name = "PanelHead";
             this.PanelHead.Size = new System.Drawing.Size(1014, 100);
             this.PanelHead.TabIndex = 7;
+            // 
+            // ButtonSubmit
+            // 
+            this.ButtonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonSubmit.FlatAppearance.BorderSize = 0;
+            this.ButtonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSubmit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonSubmit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonSubmit.Location = new System.Drawing.Point(922, 39);
+            this.ButtonSubmit.Name = "ButtonSubmit";
+            this.ButtonSubmit.Size = new System.Drawing.Size(65, 28);
+            this.ButtonSubmit.TabIndex = 6;
+            this.ButtonSubmit.Text = "提 交";
+            this.ButtonSubmit.UseVisualStyleBackColor = false;
+            // 
+            // PanelPriceList
+            // 
+            this.PanelPriceList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPriceList.Location = new System.Drawing.Point(0, 100);
+            this.PanelPriceList.Name = "PanelPriceList";
+            this.PanelPriceList.Size = new System.Drawing.Size(1014, 581);
+            this.PanelPriceList.TabIndex = 9;
             // 
             // FormTeaPrice
             // 
@@ -46,10 +73,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1014, 681);
+            this.Controls.Add(this.PanelPriceList);
             this.Controls.Add(this.PanelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTeaPrice";
             this.Text = "FormTeaPrice";
+            this.PanelHead.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -57,5 +86,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelHead;
+        private System.Windows.Forms.Button ButtonSubmit;
+        private System.Windows.Forms.Panel PanelPriceList;
     }
 }

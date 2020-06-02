@@ -156,18 +156,21 @@ namespace 洗浴中心会员管理系统
         {
             //需要进行权限判断
             HideSubMenu();
+            OpenChildForm(new FormMaterialManagement());
         }
 
         private void ButtonCouponIssue_Click(object sender, EventArgs e)
         {
             //需要进行权限判断
             HideSubMenu();
+            OpenChildForm(new FormCouponIssue());
         }
 
         private void ButtonDataReport_Click(object sender, EventArgs e)
         {
             //需要进行权限判断
             HideSubMenu();
+            OpenChildForm(new FormDataReport());
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)

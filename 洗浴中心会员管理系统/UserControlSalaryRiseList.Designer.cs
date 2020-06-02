@@ -78,7 +78,7 @@
             this.ButtonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonOK.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonOK.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonOK.Location = new System.Drawing.Point(923, 14);
+            this.ButtonOK.Location = new System.Drawing.Point(923, 15);
             this.ButtonOK.Name = "ButtonOK";
             this.ButtonOK.Size = new System.Drawing.Size(65, 28);
             this.ButtonOK.TabIndex = 2;
@@ -121,6 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
             this.Controls.Add(this.TextBoxPrice);
             this.Controls.Add(this.LabelYUAN);
             this.Controls.Add(this.LabelPrice);

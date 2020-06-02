@@ -57,6 +57,18 @@
     <Compile Include="FormBathPrice.Designer.cs">
       <DependentUpon>FormBathPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCouponIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCouponIssue.Designer.cs">
+      <DependentUpon>FormCouponIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataReport.Designer.cs">
+      <DependentUpon>FormDataReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEmployeeInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </Compile>
     <Compile Include="FormMassagePrice.Designer.cs">
       <DependentUpon>FormMassagePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaterialManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterialManagement.Designer.cs">
+      <DependentUpon>FormMaterialManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMemberHandling.cs">
       <SubType>Form</SubType>
@@ -137,17 +155,35 @@
     <Compile Include="UserControlConsumerList.Designer.cs">
       <DependentUpon>UserControlConsumerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlCouponList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCouponList.Designer.cs">
+      <DependentUpon>UserControlCouponList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlEmployeeList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlEmployeeList.Designer.cs">
       <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlMaterialList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMaterialList.Designer.cs">
+      <DependentUpon>UserControlMaterialList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlMemberList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlMemberList.Designer.cs">
       <DependentUpon>UserControlMemberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPriceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPriceList.Designer.cs">
+      <DependentUpon>UserControlPriceList.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlRechargePriceList.cs">
       <SubType>UserControl</SubType>
@@ -167,6 +203,12 @@
     <EmbeddedResource Include="FormBathPrice.resx">
       <DependentUpon>FormBathPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCouponIssue.resx">
+      <DependentUpon>FormCouponIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataReport.resx">
+      <DependentUpon>FormDataReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEmployeeInformation.resx">
       <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMassagePrice.resx">
       <DependentUpon>FormMassagePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterialManagement.resx">
+      <DependentUpon>FormMaterialManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMemberHandling.resx">
       <DependentUpon>FormMemberHandling.cs</DependentUpon>
@@ -216,11 +261,20 @@
     <EmbeddedResource Include="UserControlConsumerList.resx">
       <DependentUpon>UserControlConsumerList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCouponList.resx">
+      <DependentUpon>UserControlCouponList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlEmployeeList.resx">
       <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMaterialList.resx">
+      <DependentUpon>UserControlMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlMemberList.resx">
       <DependentUpon>UserControlMemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPriceList.resx">
+      <DependentUpon>UserControlPriceList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlRechargePriceList.resx">
       <DependentUpon>UserControlRechargePriceList.cs</DependentUpon>

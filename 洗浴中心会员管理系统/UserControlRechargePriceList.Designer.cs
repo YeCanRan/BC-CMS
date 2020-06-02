@@ -110,6 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
             this.Controls.Add(this.LabelGiftPrice);
             this.Controls.Add(this.LabelRechargePrice);
             this.Controls.Add(this.LabelGiftPriceTips);

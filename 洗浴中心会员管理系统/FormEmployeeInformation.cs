@@ -27,13 +27,7 @@ namespace 洗浴中心会员管理系统
                 ((UserControlEmployeeList)EmployeeList[i]).Location = new System.Drawing.Point(0, 58 * i);
                 ((UserControlEmployeeList)EmployeeList[i]).Name = "EmployeeList" + i;
                 if (i % 2 == 0)
-                {
                     ((UserControlEmployeeList)EmployeeList[i]).BackColor = Color.FromArgb(25, 20, 25);
-                }
-                else
-                {
-                    ((UserControlEmployeeList)EmployeeList[i]).BackColor = Color.FromArgb(35, 30, 35);
-                }
             }
         }
     }
