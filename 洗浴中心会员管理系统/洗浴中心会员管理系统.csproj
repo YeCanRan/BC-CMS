@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40153D48-39BB-4A75-8434-4C3C28D44DF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>洗浴中心会员管理系统</RootNamespace>
+    <AssemblyName>洗浴中心会员管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormEmployeeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmployeeInformation.Designer.cs">
+      <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberHandling.Designer.cs">
+      <DependentUpon>FormMemberHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberInformation.Designer.cs">
+      <DependentUpon>FormMemberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberRecharge.Designer.cs">
+      <DependentUpon>FormMemberRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettleAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettleAccounts.Designer.cs">
+      <DependentUpon>FormSettleAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlConsumerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlConsumerList.Designer.cs">
+      <DependentUpon>UserControlConsumerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEmployeeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEmployeeList.Designer.cs">
+      <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMemberList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMemberList.Designer.cs">
+      <DependentUpon>UserControlMemberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRechargePriceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlRechargePriceList.Designer.cs">
+      <DependentUpon>UserControlRechargePriceList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormEmployeeInformation.resx">
+      <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberHandling.resx">
+      <DependentUpon>FormMemberHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberInformation.resx">
+      <DependentUpon>FormMemberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberRecharge.resx">
+      <DependentUpon>FormMemberRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettleAccounts.resx">
+      <DependentUpon>FormSettleAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlConsumerList.resx">
+      <DependentUpon>UserControlConsumerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEmployeeList.resx">
+      <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMemberList.resx">
+      <DependentUpon>UserControlMemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlRechargePriceList.resx">
+      <DependentUpon>UserControlRechargePriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
