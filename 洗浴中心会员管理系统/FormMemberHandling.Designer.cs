@@ -33,10 +33,10 @@
             this.ButtonSubmit = new System.Windows.Forms.Button();
             this.LabelSex = new System.Windows.Forms.Label();
             this.LabelPassword = new System.Windows.Forms.Label();
-            this.LabelIDCardNumber = new System.Windows.Forms.Label();
+            this.LabelIDCardNo = new System.Windows.Forms.Label();
             this.LabelTel = new System.Windows.Forms.Label();
             this.TextBoxPassword = new System.Windows.Forms.TextBox();
-            this.TextBoxIDCardNumber = new System.Windows.Forms.TextBox();
+            this.TextBoxIDCardNo = new System.Windows.Forms.TextBox();
             this.TextBoxTel = new System.Windows.Forms.TextBox();
             this.LabelAddress = new System.Windows.Forms.Label();
             this.LabelHandlePerson = new System.Windows.Forms.Label();
@@ -112,16 +112,16 @@
             this.LabelPassword.TabIndex = 1;
             this.LabelPassword.Text = "会员密码 :";
             // 
-            // LabelIDCardNumber
+            // LabelIDCardNo
             // 
-            this.LabelIDCardNumber.AutoSize = true;
-            this.LabelIDCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelIDCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelIDCardNumber.Location = new System.Drawing.Point(518, 275);
-            this.LabelIDCardNumber.Name = "LabelIDCardNumber";
-            this.LabelIDCardNumber.Size = new System.Drawing.Size(83, 21);
-            this.LabelIDCardNumber.TabIndex = 1;
-            this.LabelIDCardNumber.Text = "身份证号 :";
+            this.LabelIDCardNo.AutoSize = true;
+            this.LabelIDCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelIDCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelIDCardNo.Location = new System.Drawing.Point(518, 275);
+            this.LabelIDCardNo.Name = "LabelIDCardNo";
+            this.LabelIDCardNo.Size = new System.Drawing.Size(83, 21);
+            this.LabelIDCardNo.TabIndex = 1;
+            this.LabelIDCardNo.Text = "身份证号 :";
             // 
             // LabelTel
             // 
@@ -144,17 +144,17 @@
             this.TextBoxPassword.Size = new System.Drawing.Size(370, 22);
             this.TextBoxPassword.TabIndex = 2;
             // 
-            // TextBoxIDCardNumber
+            // TextBoxIDCardNo
             // 
-            this.TextBoxIDCardNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TextBoxIDCardNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxIDCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxIDCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxIDCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxIDCardNumber.Location = new System.Drawing.Point(607, 274);
-            this.TextBoxIDCardNumber.Name = "TextBoxIDCardNumber";
-            this.TextBoxIDCardNumber.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxIDCardNumber.TabIndex = 2;
+            this.TextBoxIDCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxIDCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxIDCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxIDCardNo.Location = new System.Drawing.Point(607, 274);
+            this.TextBoxIDCardNo.Name = "TextBoxIDCardNo";
+            this.TextBoxIDCardNo.Size = new System.Drawing.Size(370, 22);
+            this.TextBoxIDCardNo.TabIndex = 2;
             // 
             // TextBoxTel
             // 
@@ -305,7 +305,6 @@
             this.TextBoxHandleDate.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxHandleDate.Location = new System.Drawing.Point(607, 150);
             this.TextBoxHandleDate.Name = "TextBoxHandleDate";
-            this.TextBoxHandleDate.ReadOnly = true;
             this.TextBoxHandleDate.Size = new System.Drawing.Size(370, 22);
             this.TextBoxHandleDate.TabIndex = 2;
             // 
@@ -349,7 +348,7 @@
             this.Controls.Add(this.TextBoxTel);
             this.Controls.Add(this.TextBoxHandleDate);
             this.Controls.Add(this.TextBoxHandlePerson);
-            this.Controls.Add(this.TextBoxIDCardNumber);
+            this.Controls.Add(this.TextBoxIDCardNo);
             this.Controls.Add(this.TextBoxAddress);
             this.Controls.Add(this.TextBoxPassword);
             this.Controls.Add(this.LabelRemark);
@@ -358,7 +357,7 @@
             this.Controls.Add(this.TextBoxName);
             this.Controls.Add(this.LabelHandlePerson);
             this.Controls.Add(this.LabelTel);
-            this.Controls.Add(this.LabelIDCardNumber);
+            this.Controls.Add(this.LabelIDCardNo);
             this.Controls.Add(this.LabelAddress);
             this.Controls.Add(this.LabelPassword);
             this.Controls.Add(this.LabelSex);
@@ -378,10 +377,10 @@
         private System.Windows.Forms.Button ButtonSubmit;
         private System.Windows.Forms.Label LabelSex;
         private System.Windows.Forms.Label LabelPassword;
-        private System.Windows.Forms.Label LabelIDCardNumber;
+        private System.Windows.Forms.Label LabelIDCardNo;
         private System.Windows.Forms.Label LabelTel;
         private System.Windows.Forms.TextBox TextBoxPassword;
-        private System.Windows.Forms.TextBox TextBoxIDCardNumber;
+        private System.Windows.Forms.TextBox TextBoxIDCardNo;
         private System.Windows.Forms.TextBox TextBoxTel;
         private System.Windows.Forms.Label LabelAddress;
         private System.Windows.Forms.Label LabelHandlePerson;

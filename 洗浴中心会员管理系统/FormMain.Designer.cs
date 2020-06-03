@@ -144,10 +144,10 @@
             this.ButtonExit.ForeColor = System.Drawing.Color.Gainsboro;
             this.ButtonExit.Location = new System.Drawing.Point(0, 855);
             this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonExit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.ButtonExit.Size = new System.Drawing.Size(233, 45);
             this.ButtonExit.TabIndex = 11;
-            this.ButtonExit.Text = "退出";
+            this.ButtonExit.Text = "退    出";
             this.ButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonExit.UseVisualStyleBackColor = true;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);

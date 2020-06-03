@@ -17,7 +17,7 @@ namespace 洗浴中心会员管理系统
         public FormCouponIssue()
         {
             InitializeComponent();
-            int CouponNumbers = 30;
+            int CouponNumbers = 10;
             for (int i = 0; i < CouponNumbers; i++)
             {
                 CouponList.Add(new 洗浴中心会员管理系统.UserControlCouponList());

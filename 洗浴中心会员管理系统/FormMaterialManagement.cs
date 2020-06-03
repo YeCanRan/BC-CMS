@@ -28,6 +28,7 @@ namespace 洗浴中心会员管理系统
                 ((UserControlMaterialList)MaterialList[i]).Name = "MaterialList" + i;
                 if (i % 2 == 0)
                     ((UserControlMaterialList)MaterialList[i]).BackColor = Color.FromArgb(25, 20, 25);
+                ((UserControlMaterialList)MaterialList[i]).Controls["LabelID"].Text = (MaterialNumbers - i).ToString();
             }
         }
     }

@@ -37,9 +37,9 @@
             this.TextBoxTel = new System.Windows.Forms.TextBox();
             this.TextBoxNativePlace = new System.Windows.Forms.TextBox();
             this.TextBoxNation = new System.Windows.Forms.TextBox();
-            this.TextBoxBankCardNumber = new System.Windows.Forms.TextBox();
+            this.TextBoxBankCardNo = new System.Windows.Forms.TextBox();
             this.TextBoxSalary = new System.Windows.Forms.TextBox();
-            this.TextBoxIDCardNumber = new System.Windows.Forms.TextBox();
+            this.TextBoxIDCardNo = new System.Windows.Forms.TextBox();
             this.TextBoxAddress = new System.Windows.Forms.TextBox();
             this.TextBoxPolitical = new System.Windows.Forms.TextBox();
             this.TextBoxPassword = new System.Windows.Forms.TextBox();
@@ -49,10 +49,10 @@
             this.LabelNation = new System.Windows.Forms.Label();
             this.LabelShift = new System.Windows.Forms.Label();
             this.LabelClass = new System.Windows.Forms.Label();
-            this.LabelBankCardNumber = new System.Windows.Forms.Label();
+            this.LabelBankCardNo = new System.Windows.Forms.Label();
             this.LabelTel = new System.Windows.Forms.Label();
             this.LabelPrivilegeLevel = new System.Windows.Forms.Label();
-            this.LabelIDCardNumber = new System.Windows.Forms.Label();
+            this.LabelIDCardNo = new System.Windows.Forms.Label();
             this.LabelSalary = new System.Windows.Forms.Label();
             this.LabelPolitical = new System.Windows.Forms.Label();
             this.LabelAddress = new System.Windows.Forms.Label();
@@ -176,15 +176,15 @@
             this.TextBoxNation.Size = new System.Drawing.Size(370, 22);
             this.TextBoxNation.TabIndex = 49;
             // 
-            // TextBoxBankCardNumber
+            // TextBoxBankCardNo
             // 
-            this.TextBoxBankCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxBankCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxBankCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxBankCardNumber.Location = new System.Drawing.Point(123, 557);
-            this.TextBoxBankCardNumber.Name = "TextBoxBankCardNumber";
-            this.TextBoxBankCardNumber.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxBankCardNumber.TabIndex = 58;
+            this.TextBoxBankCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxBankCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxBankCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxBankCardNo.Location = new System.Drawing.Point(123, 557);
+            this.TextBoxBankCardNo.Name = "TextBoxBankCardNo";
+            this.TextBoxBankCardNo.Size = new System.Drawing.Size(370, 22);
+            this.TextBoxBankCardNo.TabIndex = 58;
             // 
             // TextBoxSalary
             // 
@@ -198,17 +198,17 @@
             this.TextBoxSalary.Size = new System.Drawing.Size(370, 22);
             this.TextBoxSalary.TabIndex = 57;
             // 
-            // TextBoxIDCardNumber
+            // TextBoxIDCardNo
             // 
-            this.TextBoxIDCardNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TextBoxIDCardNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxIDCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxIDCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxIDCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxIDCardNumber.Location = new System.Drawing.Point(607, 324);
-            this.TextBoxIDCardNumber.Name = "TextBoxIDCardNumber";
-            this.TextBoxIDCardNumber.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxIDCardNumber.TabIndex = 47;
+            this.TextBoxIDCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxIDCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxIDCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxIDCardNo.Location = new System.Drawing.Point(607, 324);
+            this.TextBoxIDCardNo.Name = "TextBoxIDCardNo";
+            this.TextBoxIDCardNo.Size = new System.Drawing.Size(370, 22);
+            this.TextBoxIDCardNo.TabIndex = 47;
             // 
             // TextBoxAddress
             // 
@@ -307,16 +307,16 @@
             this.LabelClass.TabIndex = 36;
             this.LabelClass.Text = "类     别 :";
             // 
-            // LabelBankCardNumber
+            // LabelBankCardNo
             // 
-            this.LabelBankCardNumber.AutoSize = true;
-            this.LabelBankCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelBankCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelBankCardNumber.Location = new System.Drawing.Point(34, 558);
-            this.LabelBankCardNumber.Name = "LabelBankCardNumber";
-            this.LabelBankCardNumber.Size = new System.Drawing.Size(83, 21);
-            this.LabelBankCardNumber.TabIndex = 32;
-            this.LabelBankCardNumber.Text = "银行卡号 :";
+            this.LabelBankCardNo.AutoSize = true;
+            this.LabelBankCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelBankCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelBankCardNo.Location = new System.Drawing.Point(34, 558);
+            this.LabelBankCardNo.Name = "LabelBankCardNo";
+            this.LabelBankCardNo.Size = new System.Drawing.Size(83, 21);
+            this.LabelBankCardNo.TabIndex = 32;
+            this.LabelBankCardNo.Text = "银行卡号 :";
             // 
             // LabelTel
             // 
@@ -340,16 +340,16 @@
             this.LabelPrivilegeLevel.TabIndex = 31;
             this.LabelPrivilegeLevel.Text = "权限等级 :";
             // 
-            // LabelIDCardNumber
+            // LabelIDCardNo
             // 
-            this.LabelIDCardNumber.AutoSize = true;
-            this.LabelIDCardNumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelIDCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelIDCardNumber.Location = new System.Drawing.Point(518, 326);
-            this.LabelIDCardNumber.Name = "LabelIDCardNumber";
-            this.LabelIDCardNumber.Size = new System.Drawing.Size(83, 21);
-            this.LabelIDCardNumber.TabIndex = 35;
-            this.LabelIDCardNumber.Text = "身份证号 :";
+            this.LabelIDCardNo.AutoSize = true;
+            this.LabelIDCardNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelIDCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelIDCardNo.Location = new System.Drawing.Point(518, 326);
+            this.LabelIDCardNo.Name = "LabelIDCardNo";
+            this.LabelIDCardNo.Size = new System.Drawing.Size(83, 21);
+            this.LabelIDCardNo.TabIndex = 35;
+            this.LabelIDCardNo.Text = "身份证号 :";
             // 
             // LabelSalary
             // 
@@ -474,9 +474,9 @@
             this.Controls.Add(this.TextBoxTel);
             this.Controls.Add(this.TextBoxNativePlace);
             this.Controls.Add(this.TextBoxNation);
-            this.Controls.Add(this.TextBoxBankCardNumber);
+            this.Controls.Add(this.TextBoxBankCardNo);
             this.Controls.Add(this.TextBoxSalary);
-            this.Controls.Add(this.TextBoxIDCardNumber);
+            this.Controls.Add(this.TextBoxIDCardNo);
             this.Controls.Add(this.TextBoxAddress);
             this.Controls.Add(this.TextBoxPolitical);
             this.Controls.Add(this.TextBoxPassword);
@@ -486,10 +486,10 @@
             this.Controls.Add(this.LabelNation);
             this.Controls.Add(this.LabelShift);
             this.Controls.Add(this.LabelClass);
-            this.Controls.Add(this.LabelBankCardNumber);
+            this.Controls.Add(this.LabelBankCardNo);
             this.Controls.Add(this.LabelTel);
             this.Controls.Add(this.LabelPrivilegeLevel);
-            this.Controls.Add(this.LabelIDCardNumber);
+            this.Controls.Add(this.LabelIDCardNo);
             this.Controls.Add(this.LabelSalary);
             this.Controls.Add(this.LabelPolitical);
             this.Controls.Add(this.LabelAddress);
@@ -516,9 +516,9 @@
         private System.Windows.Forms.TextBox TextBoxTel;
         private System.Windows.Forms.TextBox TextBoxNativePlace;
         private System.Windows.Forms.TextBox TextBoxNation;
-        private System.Windows.Forms.TextBox TextBoxBankCardNumber;
+        private System.Windows.Forms.TextBox TextBoxBankCardNo;
         private System.Windows.Forms.TextBox TextBoxSalary;
-        private System.Windows.Forms.TextBox TextBoxIDCardNumber;
+        private System.Windows.Forms.TextBox TextBoxIDCardNo;
         private System.Windows.Forms.TextBox TextBoxAddress;
         private System.Windows.Forms.TextBox TextBoxPolitical;
         private System.Windows.Forms.TextBox TextBoxPassword;
@@ -528,10 +528,10 @@
         private System.Windows.Forms.Label LabelNation;
         private System.Windows.Forms.Label LabelShift;
         private System.Windows.Forms.Label LabelClass;
-        private System.Windows.Forms.Label LabelBankCardNumber;
+        private System.Windows.Forms.Label LabelBankCardNo;
         private System.Windows.Forms.Label LabelTel;
         private System.Windows.Forms.Label LabelPrivilegeLevel;
-        private System.Windows.Forms.Label LabelIDCardNumber;
+        private System.Windows.Forms.Label LabelIDCardNo;
         private System.Windows.Forms.Label LabelSalary;
         private System.Windows.Forms.Label LabelPolitical;
         private System.Windows.Forms.Label LabelAddress;

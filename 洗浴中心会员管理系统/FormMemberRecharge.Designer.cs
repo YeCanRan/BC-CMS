@@ -30,15 +30,15 @@
         {
             this.PanelSearch = new System.Windows.Forms.Panel();
             this.ButtonClear = new System.Windows.Forms.Button();
-            this.ButtonPay = new System.Windows.Forms.Button();
+            this.ButtonRecharge = new System.Windows.Forms.Button();
             this.LabelPassword = new System.Windows.Forms.Label();
             this.TextBoxPasswrod = new System.Windows.Forms.TextBox();
+            this.LabelYUAN = new System.Windows.Forms.Label();
             this.LabelPrice = new System.Windows.Forms.Label();
             this.LabelAmountOfMoneyNeed = new System.Windows.Forms.Label();
             this.TextBoxCardNumber = new System.Windows.Forms.TextBox();
             this.LabelCardNumber = new System.Windows.Forms.Label();
             this.PanelRechargePriceList = new System.Windows.Forms.Panel();
-            this.LabelYuan = new System.Windows.Forms.Label();
             this.PanelSearch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +46,10 @@
             // 
             this.PanelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.PanelSearch.Controls.Add(this.ButtonClear);
-            this.PanelSearch.Controls.Add(this.ButtonPay);
+            this.PanelSearch.Controls.Add(this.ButtonRecharge);
             this.PanelSearch.Controls.Add(this.LabelPassword);
             this.PanelSearch.Controls.Add(this.TextBoxPasswrod);
-            this.PanelSearch.Controls.Add(this.LabelYuan);
+            this.PanelSearch.Controls.Add(this.LabelYUAN);
             this.PanelSearch.Controls.Add(this.LabelPrice);
             this.PanelSearch.Controls.Add(this.LabelAmountOfMoneyNeed);
             this.PanelSearch.Controls.Add(this.TextBoxCardNumber);
@@ -68,27 +68,27 @@
             this.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonClear.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonClear.Location = new System.Drawing.Point(923, 39);
+            this.ButtonClear.Location = new System.Drawing.Point(893, 37);
             this.ButtonClear.Name = "ButtonClear";
-            this.ButtonClear.Size = new System.Drawing.Size(65, 28);
+            this.ButtonClear.Size = new System.Drawing.Size(80, 30);
             this.ButtonClear.TabIndex = 3;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
             // 
-            // ButtonPay
+            // ButtonRecharge
             // 
-            this.ButtonPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
-            this.ButtonPay.FlatAppearance.BorderSize = 0;
-            this.ButtonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonPay.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonPay.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonPay.Location = new System.Drawing.Point(842, 39);
-            this.ButtonPay.Name = "ButtonPay";
-            this.ButtonPay.Size = new System.Drawing.Size(65, 28);
-            this.ButtonPay.TabIndex = 2;
-            this.ButtonPay.Text = "充 值";
-            this.ButtonPay.UseVisualStyleBackColor = false;
+            this.ButtonRecharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonRecharge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonRecharge.FlatAppearance.BorderSize = 0;
+            this.ButtonRecharge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonRecharge.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonRecharge.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonRecharge.Location = new System.Drawing.Point(793, 37);
+            this.ButtonRecharge.Name = "ButtonRecharge";
+            this.ButtonRecharge.Size = new System.Drawing.Size(80, 30);
+            this.ButtonRecharge.TabIndex = 2;
+            this.ButtonRecharge.Text = "充 值";
+            this.ButtonRecharge.UseVisualStyleBackColor = false;
             // 
             // LabelPassword
             // 
@@ -111,6 +111,17 @@
             this.TextBoxPasswrod.ReadOnly = true;
             this.TextBoxPasswrod.Size = new System.Drawing.Size(135, 19);
             this.TextBoxPasswrod.TabIndex = 1;
+            // 
+            // LabelYUAN
+            // 
+            this.LabelYUAN.AutoSize = true;
+            this.LabelYUAN.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelYUAN.ForeColor = System.Drawing.Color.White;
+            this.LabelYUAN.Location = new System.Drawing.Point(659, 42);
+            this.LabelYUAN.Name = "LabelYUAN";
+            this.LabelYUAN.Size = new System.Drawing.Size(26, 22);
+            this.LabelYUAN.TabIndex = 0;
+            this.LabelYUAN.Text = "元";
             // 
             // LabelPrice
             // 
@@ -163,17 +174,6 @@
             this.PanelRechargePriceList.Size = new System.Drawing.Size(1014, 580);
             this.PanelRechargePriceList.TabIndex = 2;
             // 
-            // LabelYuan
-            // 
-            this.LabelYuan.AutoSize = true;
-            this.LabelYuan.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelYuan.ForeColor = System.Drawing.Color.White;
-            this.LabelYuan.Location = new System.Drawing.Point(659, 42);
-            this.LabelYuan.Name = "LabelYuan";
-            this.LabelYuan.Size = new System.Drawing.Size(26, 22);
-            this.LabelYuan.TabIndex = 0;
-            this.LabelYuan.Text = "元";
-            // 
             // FormMemberRecharge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -195,7 +195,7 @@
 
         private System.Windows.Forms.Panel PanelSearch;
         private System.Windows.Forms.Button ButtonClear;
-        private System.Windows.Forms.Button ButtonPay;
+        private System.Windows.Forms.Button ButtonRecharge;
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.TextBox TextBoxPasswrod;
         private System.Windows.Forms.Label LabelPrice;
@@ -203,6 +203,6 @@
         private System.Windows.Forms.TextBox TextBoxCardNumber;
         private System.Windows.Forms.Label LabelCardNumber;
         private System.Windows.Forms.Panel PanelRechargePriceList;
-        private System.Windows.Forms.Label LabelYuan;
+        private System.Windows.Forms.Label LabelYUAN;
     }
 }

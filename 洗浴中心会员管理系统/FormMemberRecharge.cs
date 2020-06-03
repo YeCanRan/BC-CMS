@@ -35,7 +35,7 @@ namespace 洗浴中心会员管理系统
                 {
                     ((UserControlRechargePriceList)RechargePriceList[i]).BackColor = Color.FromArgb(35, 30, 35);
                 }
-                ((UserControlRechargePriceList)RechargePriceList[i]).Controls["LabelID"].Text=(RechargePriceNumbers-i).ToString();
+                ((UserControlRechargePriceList)RechargePriceList[i]).Controls["LabelCardNo"].Text=(RechargePriceNumbers-i).ToString();
                 ((UserControlRechargePriceList)RechargePriceList[i]).Controls["LabelRechargePrice"].Text = ((RechargePriceNumbers - i)*100).ToString();
                 ((UserControlRechargePriceList)RechargePriceList[i]).Controls["LabelGiftPrice"].Text = ((int)((RechargePriceNumbers - i) * Math.Sqrt(RechargePriceNumbers - i) / 10.0 * 10) * 10).ToString();
             }

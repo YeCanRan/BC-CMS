@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxPrice = new System.Windows.Forms.TextBox();
-            this.labelClassIs = new System.Windows.Forms.Label();
+            this.TextBoxIncrement = new System.Windows.Forms.TextBox();
+            this.LabelClass = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
             this.ButtonOK = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LabelTotalReserves = new System.Windows.Forms.Label();
+            this.LabelCurrentReserve = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TextBoxPrice
+            // TextBoxIncrement
             // 
-            this.TextBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxPrice.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxPrice.Location = new System.Drawing.Point(607, 18);
-            this.TextBoxPrice.Name = "TextBoxPrice";
-            this.TextBoxPrice.Size = new System.Drawing.Size(129, 22);
-            this.TextBoxPrice.TabIndex = 16;
+            this.TextBoxIncrement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxIncrement.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxIncrement.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxIncrement.Location = new System.Drawing.Point(608, 18);
+            this.TextBoxIncrement.Name = "TextBoxIncrement";
+            this.TextBoxIncrement.Size = new System.Drawing.Size(129, 22);
+            this.TextBoxIncrement.TabIndex = 16;
             // 
-            // labelClassIs
+            // LabelClass
             // 
-            this.labelClassIs.AutoSize = true;
-            this.labelClassIs.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelClassIs.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelClassIs.Location = new System.Drawing.Point(82, 21);
-            this.labelClassIs.Name = "labelClassIs";
-            this.labelClassIs.Size = new System.Drawing.Size(32, 17);
-            this.labelClassIs.TabIndex = 13;
-            this.labelClassIs.Text = "类别";
+            this.LabelClass.AutoSize = true;
+            this.LabelClass.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelClass.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelClass.Location = new System.Drawing.Point(82, 21);
+            this.LabelClass.Name = "LabelClass";
+            this.LabelClass.Size = new System.Drawing.Size(32, 17);
+            this.LabelClass.TabIndex = 13;
+            this.LabelClass.Text = "类别";
             // 
             // LabelID
             // 
             this.LabelID.AutoSize = true;
             this.LabelID.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelID.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelID.Location = new System.Drawing.Point(29, 21);
+            this.LabelID.Location = new System.Drawing.Point(31, 21);
             this.LabelID.Name = "LabelID";
             this.LabelID.Size = new System.Drawing.Size(21, 17);
             this.LabelID.TabIndex = 15;
@@ -83,37 +83,37 @@
             this.ButtonOK.Text = "确 定";
             this.ButtonOK.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // LabelTotalReserves
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(241, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "总储备量";
+            this.LabelTotalReserves.AutoSize = true;
+            this.LabelTotalReserves.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelTotalReserves.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelTotalReserves.Location = new System.Drawing.Point(241, 21);
+            this.LabelTotalReserves.Name = "LabelTotalReserves";
+            this.LabelTotalReserves.Size = new System.Drawing.Size(56, 17);
+            this.LabelTotalReserves.TabIndex = 12;
+            this.LabelTotalReserves.Text = "总储备量";
             // 
-            // label3
+            // LabelCurrentReserve
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(424, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "现储备量";
+            this.LabelCurrentReserve.AutoSize = true;
+            this.LabelCurrentReserve.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelCurrentReserve.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelCurrentReserve.Location = new System.Drawing.Point(424, 21);
+            this.LabelCurrentReserve.Name = "LabelCurrentReserve";
+            this.LabelCurrentReserve.Size = new System.Drawing.Size(56, 17);
+            this.LabelCurrentReserve.TabIndex = 12;
+            this.LabelCurrentReserve.Text = "现储备量";
             // 
             // UserControlMaterialList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.TextBoxPrice);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelClassIs);
+            this.Controls.Add(this.TextBoxIncrement);
+            this.Controls.Add(this.LabelCurrentReserve);
+            this.Controls.Add(this.LabelTotalReserves);
+            this.Controls.Add(this.LabelClass);
             this.Controls.Add(this.LabelID);
             this.Controls.Add(this.ButtonOK);
             this.Name = "UserControlMaterialList";
@@ -125,11 +125,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBoxPrice;
-        private System.Windows.Forms.Label labelClassIs;
+        private System.Windows.Forms.TextBox TextBoxIncrement;
+        private System.Windows.Forms.Label LabelClass;
         private System.Windows.Forms.Label LabelID;
         private System.Windows.Forms.Button ButtonOK;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelTotalReserves;
+        private System.Windows.Forms.Label LabelCurrentReserve;
     }
 }

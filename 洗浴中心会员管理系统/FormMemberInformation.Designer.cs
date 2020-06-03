@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelSearch = new System.Windows.Forms.Panel();
+            this.PanelHead = new System.Windows.Forms.Panel();
             this.ButtonClear = new System.Windows.Forms.Button();
             this.ButtonSearchByTel = new System.Windows.Forms.Button();
             this.TextBoxTel = new System.Windows.Forms.TextBox();
-            this.ButtonSearchByCardNumber = new System.Windows.Forms.Button();
+            this.ButtonSearchByCardNo = new System.Windows.Forms.Button();
             this.LabelTel = new System.Windows.Forms.Label();
-            this.TextBoxCardNumber = new System.Windows.Forms.TextBox();
-            this.LabelCardNumber = new System.Windows.Forms.Label();
+            this.TextBoxCardNo = new System.Windows.Forms.TextBox();
+            this.LabelCardNo = new System.Windows.Forms.Label();
             this.PanelMemberList = new System.Windows.Forms.Panel();
-            this.PanelSearch.SuspendLayout();
+            this.PanelHead.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelSearch
+            // PanelHead
             // 
-            this.PanelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.PanelSearch.Controls.Add(this.ButtonClear);
-            this.PanelSearch.Controls.Add(this.ButtonSearchByTel);
-            this.PanelSearch.Controls.Add(this.TextBoxTel);
-            this.PanelSearch.Controls.Add(this.ButtonSearchByCardNumber);
-            this.PanelSearch.Controls.Add(this.LabelTel);
-            this.PanelSearch.Controls.Add(this.TextBoxCardNumber);
-            this.PanelSearch.Controls.Add(this.LabelCardNumber);
-            this.PanelSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearch.Location = new System.Drawing.Point(0, 0);
-            this.PanelSearch.Name = "PanelSearch";
-            this.PanelSearch.Size = new System.Drawing.Size(1014, 101);
-            this.PanelSearch.TabIndex = 1;
+            this.PanelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.PanelHead.Controls.Add(this.ButtonClear);
+            this.PanelHead.Controls.Add(this.ButtonSearchByTel);
+            this.PanelHead.Controls.Add(this.TextBoxTel);
+            this.PanelHead.Controls.Add(this.ButtonSearchByCardNo);
+            this.PanelHead.Controls.Add(this.LabelTel);
+            this.PanelHead.Controls.Add(this.TextBoxCardNo);
+            this.PanelHead.Controls.Add(this.LabelCardNo);
+            this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelHead.Location = new System.Drawing.Point(0, 0);
+            this.PanelHead.Name = "PanelHead";
+            this.PanelHead.Size = new System.Drawing.Size(1014, 101);
+            this.PanelHead.TabIndex = 1;
             // 
             // ButtonClear
             // 
@@ -64,9 +64,9 @@
             this.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonClear.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonClear.Location = new System.Drawing.Point(922, 39);
+            this.ButtonClear.Location = new System.Drawing.Point(893, 34);
             this.ButtonClear.Name = "ButtonClear";
-            this.ButtonClear.Size = new System.Drawing.Size(65, 28);
+            this.ButtonClear.Size = new System.Drawing.Size(80, 30);
             this.ButtonClear.TabIndex = 3;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             this.ButtonSearchByTel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSearchByTel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonSearchByTel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonSearchByTel.Location = new System.Drawing.Point(652, 39);
+            this.ButtonSearchByTel.Location = new System.Drawing.Point(666, 35);
             this.ButtonSearchByTel.Name = "ButtonSearchByTel";
             this.ButtonSearchByTel.Size = new System.Drawing.Size(80, 28);
             this.ButtonSearchByTel.TabIndex = 2;
@@ -90,56 +90,56 @@
             this.TextBoxTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
             this.TextBoxTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxTel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxTel.Location = new System.Drawing.Point(467, 44);
+            this.TextBoxTel.Location = new System.Drawing.Point(480, 40);
             this.TextBoxTel.Name = "TextBoxTel";
             this.TextBoxTel.Size = new System.Drawing.Size(168, 19);
             this.TextBoxTel.TabIndex = 1;
             // 
-            // ButtonSearchByCardNumber
+            // ButtonSearchByCardNo
             // 
-            this.ButtonSearchByCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
-            this.ButtonSearchByCardNumber.FlatAppearance.BorderSize = 0;
-            this.ButtonSearchByCardNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearchByCardNumber.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonSearchByCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonSearchByCardNumber.Location = new System.Drawing.Point(296, 39);
-            this.ButtonSearchByCardNumber.Name = "ButtonSearchByCardNumber";
-            this.ButtonSearchByCardNumber.Size = new System.Drawing.Size(65, 28);
-            this.ButtonSearchByCardNumber.TabIndex = 2;
-            this.ButtonSearchByCardNumber.Text = "卡号检索";
-            this.ButtonSearchByCardNumber.UseVisualStyleBackColor = false;
+            this.ButtonSearchByCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonSearchByCardNo.FlatAppearance.BorderSize = 0;
+            this.ButtonSearchByCardNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSearchByCardNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonSearchByCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonSearchByCardNo.Location = new System.Drawing.Point(291, 35);
+            this.ButtonSearchByCardNo.Name = "ButtonSearchByCardNo";
+            this.ButtonSearchByCardNo.Size = new System.Drawing.Size(65, 28);
+            this.ButtonSearchByCardNo.TabIndex = 2;
+            this.ButtonSearchByCardNo.Text = "卡号检索";
+            this.ButtonSearchByCardNo.UseVisualStyleBackColor = false;
             // 
             // LabelTel
             // 
             this.LabelTel.AutoSize = true;
             this.LabelTel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelTel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelTel.Location = new System.Drawing.Point(378, 43);
+            this.LabelTel.Location = new System.Drawing.Point(402, 39);
             this.LabelTel.Name = "LabelTel";
             this.LabelTel.Size = new System.Drawing.Size(72, 20);
             this.LabelTel.TabIndex = 0;
             this.LabelTel.Text = "电话号码 :";
             // 
-            // TextBoxCardNumber
+            // TextBoxCardNo
             // 
-            this.TextBoxCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxCardNumber.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxCardNumber.Location = new System.Drawing.Point(111, 44);
-            this.TextBoxCardNumber.Name = "TextBoxCardNumber";
-            this.TextBoxCardNumber.Size = new System.Drawing.Size(168, 19);
-            this.TextBoxCardNumber.TabIndex = 1;
+            this.TextBoxCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxCardNo.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxCardNo.Location = new System.Drawing.Point(105, 40);
+            this.TextBoxCardNo.Name = "TextBoxCardNo";
+            this.TextBoxCardNo.Size = new System.Drawing.Size(168, 19);
+            this.TextBoxCardNo.TabIndex = 1;
             // 
-            // LabelCardNumber
+            // LabelCardNo
             // 
-            this.LabelCardNumber.AutoSize = true;
-            this.LabelCardNumber.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelCardNumber.Location = new System.Drawing.Point(22, 43);
-            this.LabelCardNumber.Name = "LabelCardNumber";
-            this.LabelCardNumber.Size = new System.Drawing.Size(72, 20);
-            this.LabelCardNumber.TabIndex = 0;
-            this.LabelCardNumber.Text = "会员卡号 :";
+            this.LabelCardNo.AutoSize = true;
+            this.LabelCardNo.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelCardNo.Location = new System.Drawing.Point(27, 39);
+            this.LabelCardNo.Name = "LabelCardNo";
+            this.LabelCardNo.Size = new System.Drawing.Size(72, 20);
+            this.LabelCardNo.TabIndex = 0;
+            this.LabelCardNo.Text = "会员卡号 :";
             // 
             // PanelMemberList
             // 
@@ -157,23 +157,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1014, 681);
             this.Controls.Add(this.PanelMemberList);
-            this.Controls.Add(this.PanelSearch);
+            this.Controls.Add(this.PanelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMemberInformation";
             this.Text = "FormMemberInfo";
-            this.PanelSearch.ResumeLayout(false);
-            this.PanelSearch.PerformLayout();
+            this.PanelHead.ResumeLayout(false);
+            this.PanelHead.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel PanelSearch;
+        private System.Windows.Forms.Panel PanelHead;
         private System.Windows.Forms.Button ButtonClear;
-        private System.Windows.Forms.Button ButtonSearchByCardNumber;
-        private System.Windows.Forms.TextBox TextBoxCardNumber;
-        private System.Windows.Forms.Label LabelCardNumber;
+        private System.Windows.Forms.Button ButtonSearchByCardNo;
+        private System.Windows.Forms.TextBox TextBoxCardNo;
+        private System.Windows.Forms.Label LabelCardNo;
         private System.Windows.Forms.Panel PanelMemberList;
         private System.Windows.Forms.Button ButtonSearchByTel;
         private System.Windows.Forms.TextBox TextBoxTel;

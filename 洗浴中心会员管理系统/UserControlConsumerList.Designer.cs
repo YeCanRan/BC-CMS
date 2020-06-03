@@ -30,10 +30,10 @@
         {
             this.ButtonChoose = new System.Windows.Forms.Button();
             this.LabelID = new System.Windows.Forms.Label();
-            this.LabelNumber = new System.Windows.Forms.Label();
+            this.LabelNo = new System.Windows.Forms.Label();
             this.LabelAmountOfMoney = new System.Windows.Forms.Label();
             this.LabelIsMember = new System.Windows.Forms.Label();
-            this.LabelCardNumber = new System.Windows.Forms.Label();
+            this.LabelCardNo = new System.Windows.Forms.Label();
             this.LabelSex = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,9 +45,9 @@
             this.ButtonChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonChoose.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonChoose.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonChoose.Location = new System.Drawing.Point(940, 15);
+            this.ButtonChoose.Location = new System.Drawing.Point(910, 14);
             this.ButtonChoose.Name = "ButtonChoose";
-            this.ButtonChoose.Size = new System.Drawing.Size(65, 28);
+            this.ButtonChoose.Size = new System.Drawing.Size(80, 30);
             this.ButtonChoose.TabIndex = 0;
             this.ButtonChoose.Text = "选 择";
             this.ButtonChoose.UseVisualStyleBackColor = false;
@@ -57,29 +57,29 @@
             this.LabelID.AutoSize = true;
             this.LabelID.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelID.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelID.Location = new System.Drawing.Point(56, 21);
+            this.LabelID.Location = new System.Drawing.Point(31, 21);
             this.LabelID.Name = "LabelID";
             this.LabelID.Size = new System.Drawing.Size(21, 17);
             this.LabelID.TabIndex = 1;
             this.LabelID.Text = "ID";
             // 
-            // LabelNumber
+            // LabelNo
             // 
-            this.LabelNumber.AutoSize = true;
-            this.LabelNumber.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelNumber.Location = new System.Drawing.Point(108, 21);
-            this.LabelNumber.Name = "LabelNumber";
-            this.LabelNumber.Size = new System.Drawing.Size(32, 17);
-            this.LabelNumber.TabIndex = 1;
-            this.LabelNumber.Text = "号牌";
+            this.LabelNo.AutoSize = true;
+            this.LabelNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelNo.Location = new System.Drawing.Point(128, 21);
+            this.LabelNo.Name = "LabelNo";
+            this.LabelNo.Size = new System.Drawing.Size(32, 17);
+            this.LabelNo.TabIndex = 1;
+            this.LabelNo.Text = "号牌";
             // 
             // LabelAmountOfMoney
             // 
             this.LabelAmountOfMoney.AutoSize = true;
             this.LabelAmountOfMoney.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelAmountOfMoney.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelAmountOfMoney.Location = new System.Drawing.Point(295, 21);
+            this.LabelAmountOfMoney.Location = new System.Drawing.Point(344, 21);
             this.LabelAmountOfMoney.Name = "LabelAmountOfMoney";
             this.LabelAmountOfMoney.Size = new System.Drawing.Size(56, 17);
             this.LabelAmountOfMoney.TabIndex = 1;
@@ -90,29 +90,29 @@
             this.LabelIsMember.AutoSize = true;
             this.LabelIsMember.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelIsMember.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelIsMember.Location = new System.Drawing.Point(494, 21);
+            this.LabelIsMember.Location = new System.Drawing.Point(476, 21);
             this.LabelIsMember.Name = "LabelIsMember";
-            this.LabelIsMember.Size = new System.Drawing.Size(56, 17);
+            this.LabelIsMember.Size = new System.Drawing.Size(68, 17);
             this.LabelIsMember.TabIndex = 1;
-            this.LabelIsMember.Text = "是否会员";
+            this.LabelIsMember.Text = "是否为会员";
             // 
-            // LabelCardNumber
+            // LabelCardNo
             // 
-            this.LabelCardNumber.AutoSize = true;
-            this.LabelCardNumber.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelCardNumber.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelCardNumber.Location = new System.Drawing.Point(624, 21);
-            this.LabelCardNumber.Name = "LabelCardNumber";
-            this.LabelCardNumber.Size = new System.Drawing.Size(56, 17);
-            this.LabelCardNumber.TabIndex = 1;
-            this.LabelCardNumber.Text = "会员卡号";
+            this.LabelCardNo.AutoSize = true;
+            this.LabelCardNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelCardNo.Location = new System.Drawing.Point(620, 21);
+            this.LabelCardNo.Name = "LabelCardNo";
+            this.LabelCardNo.Size = new System.Drawing.Size(56, 17);
+            this.LabelCardNo.TabIndex = 1;
+            this.LabelCardNo.Text = "会员卡号";
             // 
             // LabelSex
             // 
             this.LabelSex.AutoSize = true;
             this.LabelSex.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelSex.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelSex.Location = new System.Drawing.Point(229, 21);
+            this.LabelSex.Location = new System.Drawing.Point(236, 21);
             this.LabelSex.Name = "LabelSex";
             this.LabelSex.Size = new System.Drawing.Size(32, 17);
             this.LabelSex.TabIndex = 1;
@@ -123,11 +123,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.LabelCardNumber);
+            this.Controls.Add(this.LabelCardNo);
             this.Controls.Add(this.LabelIsMember);
             this.Controls.Add(this.LabelSex);
             this.Controls.Add(this.LabelAmountOfMoney);
-            this.Controls.Add(this.LabelNumber);
+            this.Controls.Add(this.LabelNo);
             this.Controls.Add(this.LabelID);
             this.Controls.Add(this.ButtonChoose);
             this.Name = "UserControlConsumerList";
@@ -141,10 +141,10 @@
 
         private System.Windows.Forms.Button ButtonChoose;
         private System.Windows.Forms.Label LabelID;
-        private System.Windows.Forms.Label LabelNumber;
+        private System.Windows.Forms.Label LabelNo;
         private System.Windows.Forms.Label LabelAmountOfMoney;
         private System.Windows.Forms.Label LabelIsMember;
-        private System.Windows.Forms.Label LabelCardNumber;
+        private System.Windows.Forms.Label LabelCardNo;
         private System.Windows.Forms.Label LabelSex;
     }
 }

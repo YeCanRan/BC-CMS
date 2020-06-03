@@ -30,7 +30,7 @@
         {
             this.LabelGiftPriceTips = new System.Windows.Forms.Label();
             this.LabelRechargePriceTips = new System.Windows.Forms.Label();
-            this.LabelID = new System.Windows.Forms.Label();
+            this.LabelCardNo = new System.Windows.Forms.Label();
             this.ButtonChoose = new System.Windows.Forms.Button();
             this.LabelGiftPrice = new System.Windows.Forms.Label();
             this.LabelRechargePrice = new System.Windows.Forms.Label();
@@ -52,22 +52,22 @@
             this.LabelRechargePriceTips.AutoSize = true;
             this.LabelRechargePriceTips.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelRechargePriceTips.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelRechargePriceTips.Location = new System.Drawing.Point(112, 21);
+            this.LabelRechargePriceTips.Location = new System.Drawing.Point(127, 21);
             this.LabelRechargePriceTips.Name = "LabelRechargePriceTips";
             this.LabelRechargePriceTips.Size = new System.Drawing.Size(63, 17);
             this.LabelRechargePriceTips.TabIndex = 7;
             this.LabelRechargePriceTips.Text = "充值金额 :";
             // 
-            // LabelID
+            // LabelCardNo
             // 
-            this.LabelID.AutoSize = true;
-            this.LabelID.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelID.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelID.Location = new System.Drawing.Point(33, 21);
-            this.LabelID.Name = "LabelID";
-            this.LabelID.Size = new System.Drawing.Size(21, 17);
-            this.LabelID.TabIndex = 8;
-            this.LabelID.Text = "ID";
+            this.LabelCardNo.AutoSize = true;
+            this.LabelCardNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelCardNo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelCardNo.Location = new System.Drawing.Point(28, 21);
+            this.LabelCardNo.Name = "LabelCardNo";
+            this.LabelCardNo.Size = new System.Drawing.Size(56, 17);
+            this.LabelCardNo.TabIndex = 8;
+            this.LabelCardNo.Text = "会员卡号";
             // 
             // ButtonChoose
             // 
@@ -77,9 +77,9 @@
             this.ButtonChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonChoose.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonChoose.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonChoose.Location = new System.Drawing.Point(923, 15);
+            this.ButtonChoose.Location = new System.Drawing.Point(893, 14);
             this.ButtonChoose.Name = "ButtonChoose";
-            this.ButtonChoose.Size = new System.Drawing.Size(65, 28);
+            this.ButtonChoose.Size = new System.Drawing.Size(80, 30);
             this.ButtonChoose.TabIndex = 2;
             this.ButtonChoose.Text = "选 择";
             this.ButtonChoose.UseVisualStyleBackColor = false;
@@ -100,7 +100,7 @@
             this.LabelRechargePrice.AutoSize = true;
             this.LabelRechargePrice.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelRechargePrice.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelRechargePrice.Location = new System.Drawing.Point(181, 21);
+            this.LabelRechargePrice.Location = new System.Drawing.Point(196, 21);
             this.LabelRechargePrice.Name = "LabelRechargePrice";
             this.LabelRechargePrice.Size = new System.Drawing.Size(58, 17);
             this.LabelRechargePrice.TabIndex = 4;
@@ -115,7 +115,7 @@
             this.Controls.Add(this.LabelRechargePrice);
             this.Controls.Add(this.LabelGiftPriceTips);
             this.Controls.Add(this.LabelRechargePriceTips);
-            this.Controls.Add(this.LabelID);
+            this.Controls.Add(this.LabelCardNo);
             this.Controls.Add(this.ButtonChoose);
             this.Name = "UserControlRechargePriceList";
             this.Size = new System.Drawing.Size(1014, 58);
@@ -127,7 +127,7 @@
         #endregion
         private System.Windows.Forms.Label LabelGiftPriceTips;
         private System.Windows.Forms.Label LabelRechargePriceTips;
-        private System.Windows.Forms.Label LabelID;
+        private System.Windows.Forms.Label LabelCardNo;
         private System.Windows.Forms.Button ButtonChoose;
         private System.Windows.Forms.Label LabelGiftPrice;
         private System.Windows.Forms.Label LabelRechargePrice;
