@@ -44,7 +44,7 @@
             this.LabelBankCardNo.AutoSize = true;
             this.LabelBankCardNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelBankCardNo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelBankCardNo.Location = new System.Drawing.Point(689, 21);
+            this.LabelBankCardNo.Location = new System.Drawing.Point(634, 21);
             this.LabelBankCardNo.Name = "LabelBankCardNo";
             this.LabelBankCardNo.Size = new System.Drawing.Size(56, 17);
             this.LabelBankCardNo.TabIndex = 11;
@@ -55,7 +55,7 @@
             this.LabelDateOfEmployment.AutoSize = true;
             this.LabelDateOfEmployment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelDateOfEmployment.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelDateOfEmployment.Location = new System.Drawing.Point(571, 21);
+            this.LabelDateOfEmployment.Location = new System.Drawing.Point(516, 21);
             this.LabelDateOfEmployment.Name = "LabelDateOfEmployment";
             this.LabelDateOfEmployment.Size = new System.Drawing.Size(56, 17);
             this.LabelDateOfEmployment.TabIndex = 12;
@@ -66,7 +66,7 @@
             this.LabelSex.AutoSize = true;
             this.LabelSex.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelSex.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelSex.Location = new System.Drawing.Point(241, 21);
+            this.LabelSex.Location = new System.Drawing.Point(216, 21);
             this.LabelSex.Name = "LabelSex";
             this.LabelSex.Size = new System.Drawing.Size(32, 17);
             this.LabelSex.TabIndex = 13;
@@ -77,7 +77,7 @@
             this.LabelAddress.AutoSize = true;
             this.LabelAddress.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelAddress.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelAddress.Location = new System.Drawing.Point(453, 21);
+            this.LabelAddress.Location = new System.Drawing.Point(398, 21);
             this.LabelAddress.Name = "LabelAddress";
             this.LabelAddress.Size = new System.Drawing.Size(56, 17);
             this.LabelAddress.TabIndex = 14;
@@ -88,7 +88,7 @@
             this.LabelTel.AutoSize = true;
             this.LabelTel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelTel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelTel.Location = new System.Drawing.Point(335, 21);
+            this.LabelTel.Location = new System.Drawing.Point(280, 21);
             this.LabelTel.Name = "LabelTel";
             this.LabelTel.Size = new System.Drawing.Size(56, 17);
             this.LabelTel.TabIndex = 15;
@@ -99,7 +99,7 @@
             this.LabelName.AutoSize = true;
             this.LabelName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelName.Location = new System.Drawing.Point(147, 21);
+            this.LabelName.Location = new System.Drawing.Point(132, 21);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(32, 17);
             this.LabelName.TabIndex = 16;
@@ -146,6 +146,7 @@
             this.ButtonDelete.TabIndex = 2;
             this.ButtonDelete.Text = "删 除";
             this.ButtonDelete.UseVisualStyleBackColor = false;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // UserControlEmployeeList
             // 

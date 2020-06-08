@@ -147,7 +147,6 @@ create table Coupon
 )
 
 --创建视图
---这个不对，先留着
 if exists (select * from sys.objects where name = 'ViewSettleAccounts')
 drop view ViewSettleAccounts
 go
@@ -174,14 +173,14 @@ if exists (select * from sys.objects where name = 'ViewEmployeeInformation')
 drop view ViewEmployeeInformation
 go
 create view ViewEmployeeInformation as
-	select No,Name,Sex,Tel,Address,DateOfEmployment,BankCardNo from Employee
+	select No,Name,Sex,Tel,Address,DateOfEmployment,BankCardNo from Employee where No!='100000'
 go
 
 if exists (select * from sys.objects where name = 'ViewEmployeeInformationEdit')
 drop view ViewEmployeeInformationEdit
 go
 create view ViewEmployeeInformationEdit as
-	select * from Employee
+	select * from Employee where No!='100000'
 go
 
 if exists (select * from sys.objects where name = 'ViewEmployeeClass')

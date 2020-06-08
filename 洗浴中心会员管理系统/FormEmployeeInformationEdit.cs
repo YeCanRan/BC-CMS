@@ -13,9 +13,12 @@ namespace 洗浴中心会员管理系统
 {
     public partial class FormEmployeeInformationEdit : Form
     {
-        public FormEmployeeInformationEdit()
+        Label TempRef;
+        public FormEmployeeInformationEdit(Label EmployeeNo)
         {
             InitializeComponent();
+            TempRef = EmployeeNo;
+            //这里有个try语句，参见FormMemberInformationEdit的代码
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

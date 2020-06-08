@@ -70,6 +70,7 @@
             this.ButtonClear.TabIndex = 5;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // ButtonSearchByTel
             // 
@@ -84,6 +85,7 @@
             this.ButtonSearchByTel.TabIndex = 4;
             this.ButtonSearchByTel.Text = "电话号检索";
             this.ButtonSearchByTel.UseVisualStyleBackColor = false;
+            this.ButtonSearchByTel.Click += new System.EventHandler(this.ButtonSearchByTel_Click);
             // 
             // TextBoxTel
             // 
@@ -108,6 +110,7 @@
             this.ButtonSearchByEmployeeNo.TabIndex = 2;
             this.ButtonSearchByEmployeeNo.Text = "编号检索";
             this.ButtonSearchByEmployeeNo.UseVisualStyleBackColor = false;
+            this.ButtonSearchByEmployeeNo.Click += new System.EventHandler(this.ButtonSearchByEmployeeNo_Click);
             // 
             // LabelTel
             // 

@@ -23,8 +23,8 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SettleAccountsCmd = new SqlCommand("select * from ViewMemberInformation", GlobalClass.Connection);
-                SqlDataReader data = SettleAccountsCmd.ExecuteReader();
+                SqlCommand MemberInformationCmd = new SqlCommand("select * from ViewMemberInformation", GlobalClass.Connection);
+                SqlDataReader data = MemberInformationCmd.ExecuteReader();
                 int i = 0;
                 while (data.Read())
                 {
@@ -77,8 +77,8 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SettleAccountsCmd = new SqlCommand("select * from ViewMemberInformation where CardNo=" + TextBoxCardNo.Text, GlobalClass.Connection);
-                SqlDataReader data = SettleAccountsCmd.ExecuteReader();
+                SqlCommand SearchByCardNoCmd = new SqlCommand("select * from ViewMemberInformation where CardNo=" + TextBoxCardNo.Text, GlobalClass.Connection);
+                SqlDataReader data = SearchByCardNoCmd.ExecuteReader();
                 data.Read();
                 //MessageBox.Show(data[0].ToString(), "");
                 for (int i = 0; i < MemberList.Count; i++)
@@ -91,6 +91,7 @@ namespace 洗浴中心会员管理系统
                         this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
                     }
                 }
+                data.Close();
                 /*while (data.Read())
                 {
                     if (((UserControlMemberList)MemberList[i]).Controls["LabelMemberNo"].Text == data[0].ToString())
@@ -132,8 +133,8 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SettleAccountsCmd = new SqlCommand("select * from ViewMemberInformation where Tel=" + TextBoxTel.Text, GlobalClass.Connection);
-                SqlDataReader data = SettleAccountsCmd.ExecuteReader();
+                SqlCommand SearchByTelCmd = new SqlCommand("select * from ViewMemberInformation where Tel=" + TextBoxTel.Text, GlobalClass.Connection);
+                SqlDataReader data = SearchByTelCmd.ExecuteReader();
                 data.Read();
                 for (int i = 0; i < MemberList.Count; i++)
                 {
@@ -143,6 +144,7 @@ namespace 洗浴中心会员管理系统
                         this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
                     }
                 }
+                data.Close();
             }
             catch (Exception ex)
             {
