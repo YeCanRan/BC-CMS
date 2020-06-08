@@ -18,7 +18,7 @@ namespace 洗浴中心会员管理系统
             Application.SetCompatibleTextRenderingDefault(false);
             FormLogin FormLogin = new FormLogin();
             FormLogin.ShowDialog();
-            if(FormLogin.DialogResult==DialogResult.OK)
+            if (FormLogin.DialogResult == DialogResult.OK)
                 Application.Run(new FormMain());
         }
     }

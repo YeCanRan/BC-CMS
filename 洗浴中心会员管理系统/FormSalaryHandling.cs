@@ -27,13 +27,7 @@ namespace 洗浴中心会员管理系统
                 ((UserControlSalaryRiseList)SalaryRiseList[i]).Location = new System.Drawing.Point(0, 58 * i);
                 ((UserControlSalaryRiseList)SalaryRiseList[i]).Name = "SalaryRiseList" + i;
                 if (i % 2 == 0)
-                {
                     ((UserControlSalaryRiseList)SalaryRiseList[i]).BackColor = Color.FromArgb(25, 20, 25);
-                }
-                else
-                {
-                    ((UserControlSalaryRiseList)SalaryRiseList[i]).BackColor = Color.FromArgb(35, 30, 35);
-                }
                 ((UserControlSalaryRiseList)SalaryRiseList[i]).Controls["LabelID"].Text = (SalaryRiseNumbers - i).ToString();
             }
         }

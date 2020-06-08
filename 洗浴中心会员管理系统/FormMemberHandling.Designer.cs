@@ -73,7 +73,7 @@
             this.TextBoxName.Location = new System.Drawing.Point(124, 211);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxName.TabIndex = 2;
+            this.TextBoxName.TabIndex = 3;
             // 
             // ButtonSubmit
             // 
@@ -86,9 +86,10 @@
             this.ButtonSubmit.Location = new System.Drawing.Point(912, 531);
             this.ButtonSubmit.Name = "ButtonSubmit";
             this.ButtonSubmit.Size = new System.Drawing.Size(65, 30);
-            this.ButtonSubmit.TabIndex = 3;
+            this.ButtonSubmit.TabIndex = 13;
             this.ButtonSubmit.Text = "提 交";
             this.ButtonSubmit.UseVisualStyleBackColor = false;
+            this.ButtonSubmit.Click += new System.EventHandler(this.ButtonSubmit_Click);
             // 
             // LabelSex
             // 
@@ -141,8 +142,9 @@
             this.TextBoxPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxPassword.Location = new System.Drawing.Point(124, 274);
             this.TextBoxPassword.Name = "TextBoxPassword";
+            this.TextBoxPassword.PasswordChar = '*';
             this.TextBoxPassword.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxPassword.TabIndex = 2;
+            this.TextBoxPassword.TabIndex = 6;
             // 
             // TextBoxIDCardNo
             // 
@@ -154,7 +156,7 @@
             this.TextBoxIDCardNo.Location = new System.Drawing.Point(607, 274);
             this.TextBoxIDCardNo.Name = "TextBoxIDCardNo";
             this.TextBoxIDCardNo.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxIDCardNo.TabIndex = 2;
+            this.TextBoxIDCardNo.TabIndex = 7;
             // 
             // TextBoxTel
             // 
@@ -164,7 +166,7 @@
             this.TextBoxTel.Location = new System.Drawing.Point(124, 336);
             this.TextBoxTel.Name = "TextBoxTel";
             this.TextBoxTel.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxTel.TabIndex = 2;
+            this.TextBoxTel.TabIndex = 8;
             // 
             // LabelAddress
             // 
@@ -209,7 +211,7 @@
             this.TextBoxAddress.Location = new System.Drawing.Point(607, 336);
             this.TextBoxAddress.Name = "TextBoxAddress";
             this.TextBoxAddress.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxAddress.TabIndex = 2;
+            this.TextBoxAddress.TabIndex = 9;
             // 
             // TextBoxHandlePerson
             // 
@@ -219,7 +221,7 @@
             this.TextBoxHandlePerson.Location = new System.Drawing.Point(124, 150);
             this.TextBoxHandlePerson.Name = "TextBoxHandlePerson";
             this.TextBoxHandlePerson.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxHandlePerson.TabIndex = 2;
+            this.TextBoxHandlePerson.TabIndex = 1;
             // 
             // TextBoxRechargeAmount
             // 
@@ -229,7 +231,7 @@
             this.TextBoxRechargeAmount.Location = new System.Drawing.Point(124, 398);
             this.TextBoxRechargeAmount.Name = "TextBoxRechargeAmount";
             this.TextBoxRechargeAmount.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxRechargeAmount.TabIndex = 2;
+            this.TextBoxRechargeAmount.TabIndex = 10;
             // 
             // LabelRemark
             // 
@@ -253,7 +255,7 @@
             this.TextBoxRemark.Multiline = true;
             this.TextBoxRemark.Name = "TextBoxRemark";
             this.TextBoxRemark.Size = new System.Drawing.Size(370, 100);
-            this.TextBoxRemark.TabIndex = 2;
+            this.TextBoxRemark.TabIndex = 11;
             // 
             // RadioButtonMan
             // 
@@ -280,7 +282,7 @@
             this.RadioButtonWoman.Location = new System.Drawing.Point(656, 210);
             this.RadioButtonWoman.Name = "RadioButtonWoman";
             this.RadioButtonWoman.Size = new System.Drawing.Size(43, 25);
-            this.RadioButtonWoman.TabIndex = 4;
+            this.RadioButtonWoman.TabIndex = 5;
             this.RadioButtonWoman.TabStop = true;
             this.RadioButtonWoman.Text = "女";
             this.RadioButtonWoman.UseVisualStyleBackColor = true;
@@ -319,9 +321,10 @@
             this.ButtonClear.Location = new System.Drawing.Point(830, 531);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(65, 30);
-            this.ButtonClear.TabIndex = 3;
+            this.ButtonClear.TabIndex = 12;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // PanelHead
             // 

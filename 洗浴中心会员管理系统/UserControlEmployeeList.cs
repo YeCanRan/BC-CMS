@@ -16,5 +16,11 @@ namespace 洗浴中心会员管理系统
         {
             InitializeComponent();
         }
+
+        private void ButtonModify_Click(object sender, EventArgs e)
+        {
+            FormEmployeeInformationEdit Edit = new FormEmployeeInformationEdit();
+            Edit.ShowDialog();
+        }
     }
 }

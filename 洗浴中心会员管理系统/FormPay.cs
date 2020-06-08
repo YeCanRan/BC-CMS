@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace 洗浴中心会员管理系统
 {
-    public partial class UserControlCouponList : UserControl
+    public partial class FormPay : Form
     {
-        public UserControlCouponList()
+        public FormPay()
         {
             InitializeComponent();
         }

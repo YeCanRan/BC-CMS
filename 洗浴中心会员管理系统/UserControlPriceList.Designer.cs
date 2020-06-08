@@ -68,7 +68,7 @@
             this.TextBoxOriginalPrice.Name = "TextBoxOriginalPrice";
             this.TextBoxOriginalPrice.ReadOnly = true;
             this.TextBoxOriginalPrice.Size = new System.Drawing.Size(66, 19);
-            this.TextBoxOriginalPrice.TabIndex = 9;
+            this.TextBoxOriginalPrice.TabIndex = 1;
             // 
             // LabelYUAN1
             // 
@@ -100,7 +100,7 @@
             this.TextBoxPresentPrice.Location = new System.Drawing.Point(525, 20);
             this.TextBoxPresentPrice.Name = "TextBoxPresentPrice";
             this.TextBoxPresentPrice.Size = new System.Drawing.Size(66, 19);
-            this.TextBoxPresentPrice.TabIndex = 9;
+            this.TextBoxPresentPrice.TabIndex = 2;
             // 
             // ButtonOK
             // 
@@ -113,7 +113,7 @@
             this.ButtonOK.Location = new System.Drawing.Point(893, 14);
             this.ButtonOK.Name = "ButtonOK";
             this.ButtonOK.Size = new System.Drawing.Size(80, 30);
-            this.ButtonOK.TabIndex = 10;
+            this.ButtonOK.TabIndex = 3;
             this.ButtonOK.Text = "确 定";
             this.ButtonOK.UseVisualStyleBackColor = false;
             // 

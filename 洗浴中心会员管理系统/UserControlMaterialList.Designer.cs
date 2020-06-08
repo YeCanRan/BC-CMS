@@ -44,7 +44,7 @@
             this.TextBoxIncrement.Location = new System.Drawing.Point(608, 18);
             this.TextBoxIncrement.Name = "TextBoxIncrement";
             this.TextBoxIncrement.Size = new System.Drawing.Size(129, 22);
-            this.TextBoxIncrement.TabIndex = 16;
+            this.TextBoxIncrement.TabIndex = 1;
             // 
             // LabelClass
             // 
@@ -79,7 +79,7 @@
             this.ButtonOK.Location = new System.Drawing.Point(893, 14);
             this.ButtonOK.Name = "ButtonOK";
             this.ButtonOK.Size = new System.Drawing.Size(80, 30);
-            this.ButtonOK.TabIndex = 10;
+            this.ButtonOK.TabIndex = 2;
             this.ButtonOK.Text = "确 定";
             this.ButtonOK.UseVisualStyleBackColor = false;
             // 

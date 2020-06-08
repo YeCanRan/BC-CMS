@@ -51,6 +51,7 @@
             this.ButtonChoose.TabIndex = 0;
             this.ButtonChoose.Text = "选 择";
             this.ButtonChoose.UseVisualStyleBackColor = false;
+            this.ButtonChoose.Click += new System.EventHandler(this.ButtonChoose_Click);
             // 
             // LabelID
             // 
@@ -101,7 +102,7 @@
             this.LabelCardNo.AutoSize = true;
             this.LabelCardNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelCardNo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelCardNo.Location = new System.Drawing.Point(620, 21);
+            this.LabelCardNo.Location = new System.Drawing.Point(580, 21);
             this.LabelCardNo.Name = "LabelCardNo";
             this.LabelCardNo.Size = new System.Drawing.Size(56, 17);
             this.LabelCardNo.TabIndex = 1;

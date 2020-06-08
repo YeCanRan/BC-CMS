@@ -67,9 +67,10 @@
             this.ButtonClear.Location = new System.Drawing.Point(893, 34);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(80, 30);
-            this.ButtonClear.TabIndex = 3;
+            this.ButtonClear.TabIndex = 5;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // ButtonSearchByTel
             // 
@@ -81,9 +82,10 @@
             this.ButtonSearchByTel.Location = new System.Drawing.Point(666, 35);
             this.ButtonSearchByTel.Name = "ButtonSearchByTel";
             this.ButtonSearchByTel.Size = new System.Drawing.Size(80, 28);
-            this.ButtonSearchByTel.TabIndex = 2;
+            this.ButtonSearchByTel.TabIndex = 4;
             this.ButtonSearchByTel.Text = "电话号检索";
             this.ButtonSearchByTel.UseVisualStyleBackColor = false;
+            this.ButtonSearchByTel.Click += new System.EventHandler(this.ButtonSearchByTel_Click);
             // 
             // TextBoxTel
             // 
@@ -93,7 +95,7 @@
             this.TextBoxTel.Location = new System.Drawing.Point(480, 40);
             this.TextBoxTel.Name = "TextBoxTel";
             this.TextBoxTel.Size = new System.Drawing.Size(168, 19);
-            this.TextBoxTel.TabIndex = 1;
+            this.TextBoxTel.TabIndex = 3;
             // 
             // ButtonSearchByCardNo
             // 
@@ -108,6 +110,7 @@
             this.ButtonSearchByCardNo.TabIndex = 2;
             this.ButtonSearchByCardNo.Text = "卡号检索";
             this.ButtonSearchByCardNo.UseVisualStyleBackColor = false;
+            this.ButtonSearchByCardNo.Click += new System.EventHandler(this.ButtonSearchByCardNo_Click);
             // 
             // LabelTel
             // 
@@ -118,7 +121,7 @@
             this.LabelTel.Name = "LabelTel";
             this.LabelTel.Size = new System.Drawing.Size(72, 20);
             this.LabelTel.TabIndex = 0;
-            this.LabelTel.Text = "电话号码 :";
+            this.LabelTel.Text = "联系电话 :";
             // 
             // TextBoxCardNo
             // 

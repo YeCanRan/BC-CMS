@@ -80,7 +80,7 @@
             this.TextBoxPrice.Location = new System.Drawing.Point(271, 17);
             this.TextBoxPrice.Name = "TextBoxPrice";
             this.TextBoxPrice.Size = new System.Drawing.Size(129, 22);
-            this.TextBoxPrice.TabIndex = 9;
+            this.TextBoxPrice.TabIndex = 1;
             // 
             // LabelYUAN
             // 

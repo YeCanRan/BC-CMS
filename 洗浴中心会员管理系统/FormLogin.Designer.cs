@@ -31,24 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTitle = new System.Windows.Forms.Label();
-            this.PanelButton = new System.Windows.Forms.Panel();
+            this.PanelBottom = new System.Windows.Forms.Panel();
+            this.PanelPassword = new System.Windows.Forms.Panel();
+            this.TextBoxPassword = new System.Windows.Forms.TextBox();
+            this.PanelAccount = new System.Windows.Forms.Panel();
+            this.TextBoxAccount = new System.Windows.Forms.TextBox();
             this.PanelProgressBarContainer = new System.Windows.Forms.Panel();
             this.PanelProgressBar = new System.Windows.Forms.Panel();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.ButtonLogin = new System.Windows.Forms.Button();
             this.LabelPassword = new System.Windows.Forms.Label();
-            this.TextBoxAccount = new System.Windows.Forms.TextBox();
             this.LabelAccount = new System.Windows.Forms.Label();
             this.TimerProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.PanelAccount = new System.Windows.Forms.Panel();
-            this.PanelPassword = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.TextBoxPassword = new System.Windows.Forms.TextBox();
             this.PanelTop.SuspendLayout();
-            this.PanelButton.SuspendLayout();
-            this.PanelProgressBarContainer.SuspendLayout();
-            this.PanelAccount.SuspendLayout();
+            this.PanelBottom.SuspendLayout();
             this.PanelPassword.SuspendLayout();
+            this.PanelAccount.SuspendLayout();
+            this.PanelProgressBarContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTop
@@ -73,21 +72,66 @@
             this.LabelTitle.TabIndex = 0;
             this.LabelTitle.Text = "欢 迎 使 用 洗 浴 中 心 会 员 管 理 系 统";
             // 
-            // PanelButton
+            // PanelBottom
             // 
-            this.PanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.PanelButton.Controls.Add(this.PanelPassword);
-            this.PanelButton.Controls.Add(this.PanelAccount);
-            this.PanelButton.Controls.Add(this.PanelProgressBarContainer);
-            this.PanelButton.Controls.Add(this.ButtonExit);
-            this.PanelButton.Controls.Add(this.ButtonLogin);
-            this.PanelButton.Controls.Add(this.LabelPassword);
-            this.PanelButton.Controls.Add(this.LabelAccount);
-            this.PanelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelButton.Location = new System.Drawing.Point(0, 80);
-            this.PanelButton.Name = "PanelButton";
-            this.PanelButton.Size = new System.Drawing.Size(484, 281);
-            this.PanelButton.TabIndex = 1;
+            this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            this.PanelBottom.Controls.Add(this.PanelPassword);
+            this.PanelBottom.Controls.Add(this.PanelAccount);
+            this.PanelBottom.Controls.Add(this.PanelProgressBarContainer);
+            this.PanelBottom.Controls.Add(this.ButtonExit);
+            this.PanelBottom.Controls.Add(this.ButtonLogin);
+            this.PanelBottom.Controls.Add(this.LabelPassword);
+            this.PanelBottom.Controls.Add(this.LabelAccount);
+            this.PanelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelBottom.Location = new System.Drawing.Point(0, 80);
+            this.PanelBottom.Name = "PanelBottom";
+            this.PanelBottom.Size = new System.Drawing.Size(484, 281);
+            this.PanelBottom.TabIndex = 0;
+            // 
+            // PanelPassword
+            // 
+            this.PanelPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.PanelPassword.Controls.Add(this.TextBoxPassword);
+            this.PanelPassword.Location = new System.Drawing.Point(53, 131);
+            this.PanelPassword.Name = "PanelPassword";
+            this.PanelPassword.Size = new System.Drawing.Size(380, 28);
+            this.PanelPassword.TabIndex = 1;
+            // 
+            // TextBoxPassword
+            // 
+            this.TextBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxPassword.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxPassword.Location = new System.Drawing.Point(5, 3);
+            this.TextBoxPassword.MaxLength = 32;
+            this.TextBoxPassword.Name = "TextBoxPassword";
+            this.TextBoxPassword.PasswordChar = '*';
+            this.TextBoxPassword.Size = new System.Drawing.Size(370, 22);
+            this.TextBoxPassword.TabIndex = 2;
+            this.TextBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxPassword_KeyDown);
+            // 
+            // PanelAccount
+            // 
+            this.PanelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.PanelAccount.Controls.Add(this.TextBoxAccount);
+            this.PanelAccount.Location = new System.Drawing.Point(53, 47);
+            this.PanelAccount.Name = "PanelAccount";
+            this.PanelAccount.Size = new System.Drawing.Size(380, 28);
+            this.PanelAccount.TabIndex = 0;
+            // 
+            // TextBoxAccount
+            // 
+            this.TextBoxAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.TextBoxAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxAccount.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBoxAccount.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxAccount.Location = new System.Drawing.Point(5, 3);
+            this.TextBoxAccount.MaxLength = 6;
+            this.TextBoxAccount.Name = "TextBoxAccount";
+            this.TextBoxAccount.Size = new System.Drawing.Size(370, 22);
+            this.TextBoxAccount.TabIndex = 1;
+            this.TextBoxAccount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxAccount_KeyDown);
             // 
             // PanelProgressBarContainer
             // 
@@ -147,18 +191,6 @@
             this.LabelPassword.TabIndex = 0;
             this.LabelPassword.Text = "密   码 :";
             // 
-            // TextBoxAccount
-            // 
-            this.TextBoxAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxAccount.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxAccount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TextBoxAccount.Location = new System.Drawing.Point(5, 3);
-            this.TextBoxAccount.MaxLength = 32;
-            this.TextBoxAccount.Name = "TextBoxAccount";
-            this.TextBoxAccount.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxAccount.TabIndex = 1;
-            // 
             // LabelAccount
             // 
             this.LabelAccount.AutoSize = true;
@@ -175,56 +207,12 @@
             this.TimerProgressBar.Interval = 10;
             this.TimerProgressBar.Tick += new System.EventHandler(this.TimerProgressBar_Tick);
             // 
-            // PanelAccount
-            // 
-            this.PanelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.PanelAccount.Controls.Add(this.TextBoxAccount);
-            this.PanelAccount.Location = new System.Drawing.Point(53, 47);
-            this.PanelAccount.Name = "PanelAccount";
-            this.PanelAccount.Size = new System.Drawing.Size(380, 28);
-            this.PanelAccount.TabIndex = 6;
-            // 
-            // PanelPassword
-            // 
-            this.PanelPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.PanelPassword.Controls.Add(this.TextBoxPassword);
-            this.PanelPassword.Controls.Add(this.textBox1);
-            this.PanelPassword.Location = new System.Drawing.Point(53, 131);
-            this.PanelPassword.Name = "PanelPassword";
-            this.PanelPassword.Size = new System.Drawing.Size(380, 28);
-            this.PanelPassword.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(0, 3);
-            this.textBox1.MaxLength = 32;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // TextBoxPassword
-            // 
-            this.TextBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBoxPassword.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TextBoxPassword.Location = new System.Drawing.Point(5, 3);
-            this.TextBoxPassword.MaxLength = 32;
-            this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.PasswordChar = '*';
-            this.TextBoxPassword.Size = new System.Drawing.Size(370, 22);
-            this.TextBoxPassword.TabIndex = 2;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.PanelButton);
+            this.Controls.Add(this.PanelBottom);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -233,13 +221,13 @@
             this.Text = "FormLogin";
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
-            this.PanelButton.ResumeLayout(false);
-            this.PanelButton.PerformLayout();
-            this.PanelProgressBarContainer.ResumeLayout(false);
-            this.PanelAccount.ResumeLayout(false);
-            this.PanelAccount.PerformLayout();
+            this.PanelBottom.ResumeLayout(false);
+            this.PanelBottom.PerformLayout();
             this.PanelPassword.ResumeLayout(false);
             this.PanelPassword.PerformLayout();
+            this.PanelAccount.ResumeLayout(false);
+            this.PanelAccount.PerformLayout();
+            this.PanelProgressBarContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,7 +235,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelTop;
-        private System.Windows.Forms.Panel PanelButton;
+        private System.Windows.Forms.Panel PanelBottom;
         private System.Windows.Forms.Button ButtonExit;
         private System.Windows.Forms.Button ButtonLogin;
         private System.Windows.Forms.Label LabelPassword;
@@ -260,6 +248,5 @@
         private System.Windows.Forms.Panel PanelAccount;
         private System.Windows.Forms.Panel PanelPassword;
         private System.Windows.Forms.TextBox TextBoxPassword;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

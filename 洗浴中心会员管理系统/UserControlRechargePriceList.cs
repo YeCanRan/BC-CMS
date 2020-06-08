@@ -12,9 +12,16 @@ namespace 洗浴中心会员管理系统
 {
     public partial class UserControlRechargePriceList : UserControl
     {
-        public UserControlRechargePriceList()
+        Label TempRef;
+        public UserControlRechargePriceList(Label LabelPrice)
         {
             InitializeComponent();
+            TempRef = LabelPrice;
+        }
+
+        private void ButtonChoose_Click(object sender, EventArgs e)
+        {
+            TempRef.Text = this.LabelRechargePrice.Text;
         }
     }
 }

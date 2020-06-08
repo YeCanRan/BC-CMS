@@ -139,7 +139,7 @@
             this.ButtonAddLeaflets.Location = new System.Drawing.Point(593, 37);
             this.ButtonAddLeaflets.Name = "ButtonAddLeaflets";
             this.ButtonAddLeaflets.Size = new System.Drawing.Size(80, 30);
-            this.ButtonAddLeaflets.TabIndex = 5;
+            this.ButtonAddLeaflets.TabIndex = 1;
             this.ButtonAddLeaflets.Text = "添加宣传单";
             this.ButtonAddLeaflets.UseVisualStyleBackColor = false;
             // 
@@ -154,7 +154,7 @@
             this.ButtonAddBathCoupon.Location = new System.Drawing.Point(693, 37);
             this.ButtonAddBathCoupon.Name = "ButtonAddBathCoupon";
             this.ButtonAddBathCoupon.Size = new System.Drawing.Size(80, 30);
-            this.ButtonAddBathCoupon.TabIndex = 5;
+            this.ButtonAddBathCoupon.TabIndex = 2;
             this.ButtonAddBathCoupon.Text = "添加浴资券";
             this.ButtonAddBathCoupon.UseVisualStyleBackColor = false;
             // 
@@ -169,7 +169,7 @@
             this.ButtonAddDiscountCoupon.Location = new System.Drawing.Point(793, 37);
             this.ButtonAddDiscountCoupon.Name = "ButtonAddDiscountCoupon";
             this.ButtonAddDiscountCoupon.Size = new System.Drawing.Size(80, 30);
-            this.ButtonAddDiscountCoupon.TabIndex = 5;
+            this.ButtonAddDiscountCoupon.TabIndex = 3;
             this.ButtonAddDiscountCoupon.Text = "添加打折券";
             this.ButtonAddDiscountCoupon.UseVisualStyleBackColor = false;
             // 
@@ -184,7 +184,7 @@
             this.ButtonAddCashCoupon.Location = new System.Drawing.Point(893, 37);
             this.ButtonAddCashCoupon.Name = "ButtonAddCashCoupon";
             this.ButtonAddCashCoupon.Size = new System.Drawing.Size(80, 30);
-            this.ButtonAddCashCoupon.TabIndex = 5;
+            this.ButtonAddCashCoupon.TabIndex = 4;
             this.ButtonAddCashCoupon.Text = "添加代金券";
             this.ButtonAddCashCoupon.UseVisualStyleBackColor = false;
             // 

@@ -94,7 +94,7 @@
             this.ButtonSubmit.Location = new System.Drawing.Point(893, 36);
             this.ButtonSubmit.Name = "ButtonSubmit";
             this.ButtonSubmit.Size = new System.Drawing.Size(80, 30);
-            this.ButtonSubmit.TabIndex = 4;
+            this.ButtonSubmit.TabIndex = 1;
             this.ButtonSubmit.Text = "提 交";
             this.ButtonSubmit.UseVisualStyleBackColor = false;
             // 

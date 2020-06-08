@@ -92,7 +92,7 @@
             this.ButtonChoose.Location = new System.Drawing.Point(893, 14);
             this.ButtonChoose.Name = "ButtonChoose";
             this.ButtonChoose.Size = new System.Drawing.Size(80, 30);
-            this.ButtonChoose.TabIndex = 2;
+            this.ButtonChoose.TabIndex = 1;
             this.ButtonChoose.Text = "选 择";
             this.ButtonChoose.UseVisualStyleBackColor = false;
             // 

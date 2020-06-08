@@ -1,6 +1,6 @@
 ﻿namespace 洗浴中心会员管理系统
 {
-    partial class FormEntryHandling
+    partial class FormEmployeeInformationEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.PanelHead = new System.Windows.Forms.Panel();
+            this.ComboBoxShift = new System.Windows.Forms.ComboBox();
+            this.ComboBoxClass = new System.Windows.Forms.ComboBox();
+            this.ComboBoxPrivilegeLevel = new System.Windows.Forms.ComboBox();
             this.ButtonClear = new System.Windows.Forms.Button();
             this.ButtonSubmit = new System.Windows.Forms.Button();
             this.RadioButtonWoman = new System.Windows.Forms.RadioButton();
@@ -59,9 +62,7 @@
             this.LabelPassword = new System.Windows.Forms.Label();
             this.LabelSex = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
-            this.ComboBoxPrivilegeLevel = new System.Windows.Forms.ComboBox();
-            this.ComboBoxClass = new System.Windows.Forms.ComboBox();
-            this.ComboBoxShift = new System.Windows.Forms.ComboBox();
+            this.ButtonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PanelHead
@@ -71,7 +72,48 @@
             this.PanelHead.Location = new System.Drawing.Point(0, 0);
             this.PanelHead.Name = "PanelHead";
             this.PanelHead.Size = new System.Drawing.Size(1014, 100);
-            this.PanelHead.TabIndex = 6;
+            this.PanelHead.TabIndex = 7;
+            this.PanelHead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHead_MouseDown);
+            // 
+            // ComboBoxShift
+            // 
+            this.ComboBoxShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.ComboBoxShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxShift.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ComboBoxShift.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ComboBoxShift.FormattingEnabled = true;
+            this.ComboBoxShift.Location = new System.Drawing.Point(123, 499);
+            this.ComboBoxShift.Name = "ComboBoxShift";
+            this.ComboBoxShift.Size = new System.Drawing.Size(370, 24);
+            this.ComboBoxShift.TabIndex = 14;
+            // 
+            // ComboBoxClass
+            // 
+            this.ComboBoxClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComboBoxClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.ComboBoxClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxClass.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ComboBoxClass.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ComboBoxClass.FormattingEnabled = true;
+            this.ComboBoxClass.Location = new System.Drawing.Point(607, 267);
+            this.ComboBoxClass.Name = "ComboBoxClass";
+            this.ComboBoxClass.Size = new System.Drawing.Size(370, 24);
+            this.ComboBoxClass.TabIndex = 7;
+            // 
+            // ComboBoxPrivilegeLevel
+            // 
+            this.ComboBoxPrivilegeLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComboBoxPrivilegeLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
+            this.ComboBoxPrivilegeLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxPrivilegeLevel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ComboBoxPrivilegeLevel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ComboBoxPrivilegeLevel.FormattingEnabled = true;
+            this.ComboBoxPrivilegeLevel.Location = new System.Drawing.Point(607, 205);
+            this.ComboBoxPrivilegeLevel.Name = "ComboBoxPrivilegeLevel";
+            this.ComboBoxPrivilegeLevel.Size = new System.Drawing.Size(370, 24);
+            this.ComboBoxPrivilegeLevel.TabIndex = 5;
             // 
             // ButtonClear
             // 
@@ -84,7 +126,7 @@
             this.ButtonClear.Location = new System.Drawing.Point(830, 598);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(65, 30);
-            this.ButtonClear.TabIndex = 17;
+            this.ButtonClear.TabIndex = 18;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
             // 
@@ -99,7 +141,7 @@
             this.ButtonSubmit.Location = new System.Drawing.Point(912, 598);
             this.ButtonSubmit.Name = "ButtonSubmit";
             this.ButtonSubmit.Size = new System.Drawing.Size(65, 30);
-            this.ButtonSubmit.TabIndex = 18;
+            this.ButtonSubmit.TabIndex = 19;
             this.ButtonSubmit.Text = "提 交";
             this.ButtonSubmit.UseVisualStyleBackColor = false;
             // 
@@ -250,7 +292,7 @@
             this.LabelBirthDay.Location = new System.Drawing.Point(34, 326);
             this.LabelBirthDay.Name = "LabelBirthDay";
             this.LabelBirthDay.Size = new System.Drawing.Size(83, 21);
-            this.LabelBirthDay.TabIndex = 41;
+            this.LabelBirthDay.TabIndex = 75;
             this.LabelBirthDay.Text = "出生日期 :";
             // 
             // LabelNativePlace
@@ -261,7 +303,7 @@
             this.LabelNativePlace.Location = new System.Drawing.Point(525, 385);
             this.LabelNativePlace.Name = "LabelNativePlace";
             this.LabelNativePlace.Size = new System.Drawing.Size(76, 21);
-            this.LabelNativePlace.TabIndex = 40;
+            this.LabelNativePlace.TabIndex = 74;
             this.LabelNativePlace.Text = "籍     贯 :";
             // 
             // TextBoxName
@@ -282,7 +324,7 @@
             this.LabelNation.Location = new System.Drawing.Point(41, 385);
             this.LabelNation.Name = "LabelNation";
             this.LabelNation.Size = new System.Drawing.Size(76, 21);
-            this.LabelNation.TabIndex = 39;
+            this.LabelNation.TabIndex = 73;
             this.LabelNation.Text = "民     族 :";
             // 
             // LabelShift
@@ -293,7 +335,7 @@
             this.LabelShift.Location = new System.Drawing.Point(41, 501);
             this.LabelShift.Name = "LabelShift";
             this.LabelShift.Size = new System.Drawing.Size(76, 21);
-            this.LabelShift.TabIndex = 38;
+            this.LabelShift.TabIndex = 72;
             this.LabelShift.Text = "班     次 :";
             // 
             // LabelClass
@@ -304,7 +346,7 @@
             this.LabelClass.Location = new System.Drawing.Point(525, 270);
             this.LabelClass.Name = "LabelClass";
             this.LabelClass.Size = new System.Drawing.Size(76, 21);
-            this.LabelClass.TabIndex = 36;
+            this.LabelClass.TabIndex = 70;
             this.LabelClass.Text = "类     别 :";
             // 
             // LabelBankCardNo
@@ -315,7 +357,7 @@
             this.LabelBankCardNo.Location = new System.Drawing.Point(34, 558);
             this.LabelBankCardNo.Name = "LabelBankCardNo";
             this.LabelBankCardNo.Size = new System.Drawing.Size(83, 21);
-            this.LabelBankCardNo.TabIndex = 32;
+            this.LabelBankCardNo.TabIndex = 66;
             this.LabelBankCardNo.Text = "银行卡号 :";
             // 
             // LabelTel
@@ -326,7 +368,7 @@
             this.LabelTel.Location = new System.Drawing.Point(34, 442);
             this.LabelTel.Name = "LabelTel";
             this.LabelTel.Size = new System.Drawing.Size(83, 21);
-            this.LabelTel.TabIndex = 37;
+            this.LabelTel.TabIndex = 71;
             this.LabelTel.Text = "联系电话 :";
             // 
             // LabelPrivilegeLevel
@@ -337,7 +379,7 @@
             this.LabelPrivilegeLevel.Location = new System.Drawing.Point(518, 208);
             this.LabelPrivilegeLevel.Name = "LabelPrivilegeLevel";
             this.LabelPrivilegeLevel.Size = new System.Drawing.Size(83, 21);
-            this.LabelPrivilegeLevel.TabIndex = 31;
+            this.LabelPrivilegeLevel.TabIndex = 65;
             this.LabelPrivilegeLevel.Text = "权限等级 :";
             // 
             // LabelIDCardNo
@@ -348,7 +390,7 @@
             this.LabelIDCardNo.Location = new System.Drawing.Point(518, 326);
             this.LabelIDCardNo.Name = "LabelIDCardNo";
             this.LabelIDCardNo.Size = new System.Drawing.Size(83, 21);
-            this.LabelIDCardNo.TabIndex = 35;
+            this.LabelIDCardNo.TabIndex = 69;
             this.LabelIDCardNo.Text = "身份证号 :";
             // 
             // LabelSalary
@@ -359,7 +401,7 @@
             this.LabelSalary.Location = new System.Drawing.Point(525, 501);
             this.LabelSalary.Name = "LabelSalary";
             this.LabelSalary.Size = new System.Drawing.Size(76, 21);
-            this.LabelSalary.TabIndex = 34;
+            this.LabelSalary.TabIndex = 68;
             this.LabelSalary.Text = "薪     资 :";
             // 
             // LabelPolitical
@@ -370,7 +412,7 @@
             this.LabelPolitical.Location = new System.Drawing.Point(34, 270);
             this.LabelPolitical.Name = "LabelPolitical";
             this.LabelPolitical.Size = new System.Drawing.Size(83, 21);
-            this.LabelPolitical.TabIndex = 30;
+            this.LabelPolitical.TabIndex = 64;
             this.LabelPolitical.Text = "政治面貌 :";
             // 
             // LabelAddress
@@ -381,7 +423,7 @@
             this.LabelAddress.Location = new System.Drawing.Point(518, 442);
             this.LabelAddress.Name = "LabelAddress";
             this.LabelAddress.Size = new System.Drawing.Size(83, 21);
-            this.LabelAddress.TabIndex = 33;
+            this.LabelAddress.TabIndex = 67;
             this.LabelAddress.Text = "联系地址 :";
             // 
             // LabelPassword
@@ -392,7 +434,7 @@
             this.LabelPassword.Location = new System.Drawing.Point(41, 208);
             this.LabelPassword.Name = "LabelPassword";
             this.LabelPassword.Size = new System.Drawing.Size(76, 21);
-            this.LabelPassword.TabIndex = 29;
+            this.LabelPassword.TabIndex = 63;
             this.LabelPassword.Text = "密     码 :";
             // 
             // LabelSex
@@ -403,7 +445,7 @@
             this.LabelSex.Location = new System.Drawing.Point(525, 151);
             this.LabelSex.Name = "LabelSex";
             this.LabelSex.Size = new System.Drawing.Size(76, 21);
-            this.LabelSex.TabIndex = 43;
+            this.LabelSex.TabIndex = 76;
             this.LabelSex.Text = "性     别 :";
             // 
             // LabelName
@@ -414,50 +456,26 @@
             this.LabelName.Location = new System.Drawing.Point(41, 151);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(76, 21);
-            this.LabelName.TabIndex = 28;
+            this.LabelName.TabIndex = 62;
             this.LabelName.Text = "姓     名 :";
             // 
-            // ComboBoxPrivilegeLevel
+            // ButtonCancel
             // 
-            this.ComboBoxPrivilegeLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBoxPrivilegeLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.ComboBoxPrivilegeLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboBoxPrivilegeLevel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ComboBoxPrivilegeLevel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ComboBoxPrivilegeLevel.FormattingEnabled = true;
-            this.ComboBoxPrivilegeLevel.Location = new System.Drawing.Point(607, 205);
-            this.ComboBoxPrivilegeLevel.Name = "ComboBoxPrivilegeLevel";
-            this.ComboBoxPrivilegeLevel.Size = new System.Drawing.Size(370, 24);
-            this.ComboBoxPrivilegeLevel.TabIndex = 5;
+            this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonCancel.FlatAppearance.BorderSize = 0;
+            this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCancel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonCancel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonCancel.Location = new System.Drawing.Point(748, 598);
+            this.ButtonCancel.Name = "ButtonCancel";
+            this.ButtonCancel.Size = new System.Drawing.Size(65, 30);
+            this.ButtonCancel.TabIndex = 17;
+            this.ButtonCancel.Text = "取 消";
+            this.ButtonCancel.UseVisualStyleBackColor = false;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
-            // ComboBoxClass
-            // 
-            this.ComboBoxClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBoxClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.ComboBoxClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboBoxClass.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ComboBoxClass.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ComboBoxClass.FormattingEnabled = true;
-            this.ComboBoxClass.Location = new System.Drawing.Point(607, 267);
-            this.ComboBoxClass.Name = "ComboBoxClass";
-            this.ComboBoxClass.Size = new System.Drawing.Size(370, 24);
-            this.ComboBoxClass.TabIndex = 7;
-            // 
-            // ComboBoxShift
-            // 
-            this.ComboBoxShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(95)))), ((int)(((byte)(100)))));
-            this.ComboBoxShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboBoxShift.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ComboBoxShift.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ComboBoxShift.FormattingEnabled = true;
-            this.ComboBoxShift.Location = new System.Drawing.Point(123, 499);
-            this.ComboBoxShift.Name = "ComboBoxShift";
-            this.ComboBoxShift.Size = new System.Drawing.Size(370, 24);
-            this.ComboBoxShift.TabIndex = 14;
-            // 
-            // FormEntryHandling
+            // FormEmployeeInformationEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -466,6 +484,7 @@
             this.Controls.Add(this.ComboBoxShift);
             this.Controls.Add(this.ComboBoxClass);
             this.Controls.Add(this.ComboBoxPrivilegeLevel);
+            this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonClear);
             this.Controls.Add(this.ButtonSubmit);
             this.Controls.Add(this.RadioButtonWoman);
@@ -498,8 +517,9 @@
             this.Controls.Add(this.LabelName);
             this.Controls.Add(this.PanelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormEntryHandling";
-            this.Text = "FormEntryHandling";
+            this.Name = "FormEmployeeInformationEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormEmployeeInformationEdit";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,6 +528,9 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelHead;
+        private System.Windows.Forms.ComboBox ComboBoxShift;
+        private System.Windows.Forms.ComboBox ComboBoxClass;
+        private System.Windows.Forms.ComboBox ComboBoxPrivilegeLevel;
         private System.Windows.Forms.Button ButtonClear;
         private System.Windows.Forms.Button ButtonSubmit;
         private System.Windows.Forms.RadioButton RadioButtonWoman;
@@ -538,8 +561,6 @@
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.Label LabelSex;
         private System.Windows.Forms.Label LabelName;
-        private System.Windows.Forms.ComboBox ComboBoxPrivilegeLevel;
-        private System.Windows.Forms.ComboBox ComboBoxClass;
-        private System.Windows.Forms.ComboBox ComboBoxShift;
+        private System.Windows.Forms.Button ButtonCancel;
     }
 }

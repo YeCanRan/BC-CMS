@@ -72,8 +72,9 @@
             this.CheckBoxIsMember.Location = new System.Drawing.Point(320, 47);
             this.CheckBoxIsMember.Name = "CheckBoxIsMember";
             this.CheckBoxIsMember.Size = new System.Drawing.Size(12, 11);
-            this.CheckBoxIsMember.TabIndex = 4;
+            this.CheckBoxIsMember.TabIndex = 2;
             this.CheckBoxIsMember.UseVisualStyleBackColor = true;
+            this.CheckBoxIsMember.CheckedChanged += new System.EventHandler(this.CheckBoxIsMember_CheckedChanged);
             // 
             // ButtonClear
             // 
@@ -86,9 +87,10 @@
             this.ButtonClear.Location = new System.Drawing.Point(893, 37);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(80, 30);
-            this.ButtonClear.TabIndex = 3;
+            this.ButtonClear.TabIndex = 6;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // ButtonPay
             // 
@@ -101,9 +103,10 @@
             this.ButtonPay.Location = new System.Drawing.Point(793, 37);
             this.ButtonPay.Name = "ButtonPay";
             this.ButtonPay.Size = new System.Drawing.Size(80, 30);
-            this.ButtonPay.TabIndex = 2;
+            this.ButtonPay.TabIndex = 5;
             this.ButtonPay.Text = "付 款";
             this.ButtonPay.UseVisualStyleBackColor = false;
+            this.ButtonPay.Click += new System.EventHandler(this.ButtonPay_Click);
             // 
             // ButtonCalculate
             // 
@@ -116,9 +119,10 @@
             this.ButtonCalculate.Location = new System.Drawing.Point(693, 37);
             this.ButtonCalculate.Name = "ButtonCalculate";
             this.ButtonCalculate.Size = new System.Drawing.Size(80, 30);
-            this.ButtonCalculate.TabIndex = 2;
+            this.ButtonCalculate.TabIndex = 4;
             this.ButtonCalculate.Text = "结 算";
             this.ButtonCalculate.UseVisualStyleBackColor = false;
+            this.ButtonCalculate.Click += new System.EventHandler(this.ButtonCalculate_Click);
             // 
             // LabelIsMember
             // 
@@ -140,7 +144,7 @@
             this.TextBoxCardNo.Name = "TextBoxCardNo";
             this.TextBoxCardNo.ReadOnly = true;
             this.TextBoxCardNo.Size = new System.Drawing.Size(101, 19);
-            this.TextBoxCardNo.TabIndex = 1;
+            this.TextBoxCardNo.TabIndex = 3;
             // 
             // LabelCardNo
             // 

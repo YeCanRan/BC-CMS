@@ -127,9 +127,10 @@
             this.ButtonModify.Location = new System.Drawing.Point(810, 14);
             this.ButtonModify.Name = "ButtonModify";
             this.ButtonModify.Size = new System.Drawing.Size(80, 30);
-            this.ButtonModify.TabIndex = 9;
+            this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "修 改";
             this.ButtonModify.UseVisualStyleBackColor = false;
+            this.ButtonModify.Click += new System.EventHandler(this.ButtonModify_Click);
             // 
             // ButtonDelete
             // 
@@ -142,7 +143,7 @@
             this.ButtonDelete.Location = new System.Drawing.Point(910, 14);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(80, 30);
-            this.ButtonDelete.TabIndex = 10;
+            this.ButtonDelete.TabIndex = 2;
             this.ButtonDelete.Text = "删 除";
             this.ButtonDelete.UseVisualStyleBackColor = false;
             // 

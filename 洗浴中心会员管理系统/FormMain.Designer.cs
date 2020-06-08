@@ -95,7 +95,7 @@
             this.ButtonDataReport.Name = "ButtonDataReport";
             this.ButtonDataReport.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonDataReport.Size = new System.Drawing.Size(233, 45);
-            this.ButtonDataReport.TabIndex = 14;
+            this.ButtonDataReport.TabIndex = 7;
             this.ButtonDataReport.Text = "数据报表";
             this.ButtonDataReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonDataReport.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.ButtonCouponIssue.Name = "ButtonCouponIssue";
             this.ButtonCouponIssue.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonCouponIssue.Size = new System.Drawing.Size(233, 45);
-            this.ButtonCouponIssue.TabIndex = 13;
+            this.ButtonCouponIssue.TabIndex = 6;
             this.ButtonCouponIssue.Text = "奖券发放";
             this.ButtonCouponIssue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonCouponIssue.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.ButtonMaterialManagement.Name = "ButtonMaterialManagement";
             this.ButtonMaterialManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonMaterialManagement.Size = new System.Drawing.Size(233, 45);
-            this.ButtonMaterialManagement.TabIndex = 12;
+            this.ButtonMaterialManagement.TabIndex = 5;
             this.ButtonMaterialManagement.Text = "物资管理";
             this.ButtonMaterialManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonMaterialManagement.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.ButtonExit.Size = new System.Drawing.Size(233, 45);
-            this.ButtonExit.TabIndex = 11;
+            this.ButtonExit.TabIndex = 8;
             this.ButtonExit.Text = "退    出";
             this.ButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonExit.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             this.ButtonPriceManagement.Name = "ButtonPriceManagement";
             this.ButtonPriceManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonPriceManagement.Size = new System.Drawing.Size(233, 45);
-            this.ButtonPriceManagement.TabIndex = 7;
+            this.ButtonPriceManagement.TabIndex = 4;
             this.ButtonPriceManagement.Text = "价格管理";
             this.ButtonPriceManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonPriceManagement.UseVisualStyleBackColor = true;
@@ -342,7 +342,7 @@
             this.ButtonEmployeeManagement.Name = "ButtonEmployeeManagement";
             this.ButtonEmployeeManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonEmployeeManagement.Size = new System.Drawing.Size(233, 45);
-            this.ButtonEmployeeManagement.TabIndex = 4;
+            this.ButtonEmployeeManagement.TabIndex = 3;
             this.ButtonEmployeeManagement.Text = "员工管理";
             this.ButtonEmployeeManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonEmployeeManagement.UseVisualStyleBackColor = true;

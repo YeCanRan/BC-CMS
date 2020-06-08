@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.PanelHead = new System.Windows.Forms.Panel();
-            this.PanelPriceList = new System.Windows.Forms.Panel();
             this.LabelPresentPrice = new System.Windows.Forms.Label();
             this.LabelOriginalPrice = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
             this.ButtonSubmit = new System.Windows.Forms.Button();
+            this.PanelPriceList = new System.Windows.Forms.Panel();
             this.PanelHead.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,14 +51,6 @@
             this.PanelHead.Name = "PanelHead";
             this.PanelHead.Size = new System.Drawing.Size(1014, 100);
             this.PanelHead.TabIndex = 7;
-            // 
-            // PanelPriceList
-            // 
-            this.PanelPriceList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelPriceList.Location = new System.Drawing.Point(0, 100);
-            this.PanelPriceList.Name = "PanelPriceList";
-            this.PanelPriceList.Size = new System.Drawing.Size(1014, 581);
-            this.PanelPriceList.TabIndex = 9;
             // 
             // LabelPresentPrice
             // 
@@ -115,9 +107,17 @@
             this.ButtonSubmit.Location = new System.Drawing.Point(893, 35);
             this.ButtonSubmit.Name = "ButtonSubmit";
             this.ButtonSubmit.Size = new System.Drawing.Size(80, 30);
-            this.ButtonSubmit.TabIndex = 19;
+            this.ButtonSubmit.TabIndex = 1;
             this.ButtonSubmit.Text = "提 交";
             this.ButtonSubmit.UseVisualStyleBackColor = false;
+            // 
+            // PanelPriceList
+            // 
+            this.PanelPriceList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPriceList.Location = new System.Drawing.Point(0, 100);
+            this.PanelPriceList.Name = "PanelPriceList";
+            this.PanelPriceList.Size = new System.Drawing.Size(1014, 581);
+            this.PanelPriceList.TabIndex = 9;
             // 
             // FormTeaPrice
             // 

@@ -55,7 +55,7 @@
             this.LabelHandleDate.AutoSize = true;
             this.LabelHandleDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelHandleDate.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelHandleDate.Location = new System.Drawing.Point(581, 21);
+            this.LabelHandleDate.Location = new System.Drawing.Point(571, 21);
             this.LabelHandleDate.Name = "LabelHandleDate";
             this.LabelHandleDate.Size = new System.Drawing.Size(56, 17);
             this.LabelHandleDate.TabIndex = 4;
@@ -66,7 +66,7 @@
             this.LabelSex.AutoSize = true;
             this.LabelSex.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelSex.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelSex.Location = new System.Drawing.Point(245, 21);
+            this.LabelSex.Location = new System.Drawing.Point(230, 21);
             this.LabelSex.Name = "LabelSex";
             this.LabelSex.Size = new System.Drawing.Size(32, 17);
             this.LabelSex.TabIndex = 5;
@@ -77,7 +77,7 @@
             this.LabelTel.AutoSize = true;
             this.LabelTel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelTel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelTel.Location = new System.Drawing.Point(341, 21);
+            this.LabelTel.Location = new System.Drawing.Point(301, 21);
             this.LabelTel.Name = "LabelTel";
             this.LabelTel.Size = new System.Drawing.Size(56, 17);
             this.LabelTel.TabIndex = 6;
@@ -117,8 +117,9 @@
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(80, 30);
             this.ButtonDelete.TabIndex = 2;
-            this.ButtonDelete.Text = "删除";
+            this.ButtonDelete.Text = "删 除";
             this.ButtonDelete.UseVisualStyleBackColor = false;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // ButtonModify
             // 
@@ -131,16 +132,17 @@
             this.ButtonModify.Location = new System.Drawing.Point(810, 14);
             this.ButtonModify.Name = "ButtonModify";
             this.ButtonModify.Size = new System.Drawing.Size(80, 30);
-            this.ButtonModify.TabIndex = 2;
-            this.ButtonModify.Text = "修改";
+            this.ButtonModify.TabIndex = 1;
+            this.ButtonModify.Text = "修 改";
             this.ButtonModify.UseVisualStyleBackColor = false;
+            this.ButtonModify.Click += new System.EventHandler(this.ButtonModify_Click);
             // 
             // LabelAddress
             // 
             this.LabelAddress.AutoSize = true;
             this.LabelAddress.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelAddress.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelAddress.Location = new System.Drawing.Point(461, 21);
+            this.LabelAddress.Location = new System.Drawing.Point(456, 21);
             this.LabelAddress.Name = "LabelAddress";
             this.LabelAddress.Size = new System.Drawing.Size(56, 17);
             this.LabelAddress.TabIndex = 6;

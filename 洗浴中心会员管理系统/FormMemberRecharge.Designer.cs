@@ -71,9 +71,10 @@
             this.ButtonClear.Location = new System.Drawing.Point(893, 37);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(80, 30);
-            this.ButtonClear.TabIndex = 3;
+            this.ButtonClear.TabIndex = 4;
             this.ButtonClear.Text = "清 除";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // ButtonRecharge
             // 
@@ -86,9 +87,10 @@
             this.ButtonRecharge.Location = new System.Drawing.Point(793, 37);
             this.ButtonRecharge.Name = "ButtonRecharge";
             this.ButtonRecharge.Size = new System.Drawing.Size(80, 30);
-            this.ButtonRecharge.TabIndex = 2;
+            this.ButtonRecharge.TabIndex = 3;
             this.ButtonRecharge.Text = "充 值";
             this.ButtonRecharge.UseVisualStyleBackColor = false;
+            this.ButtonRecharge.Click += new System.EventHandler(this.ButtonRecharge_Click);
             // 
             // LabelPassword
             // 
@@ -108,9 +110,9 @@
             this.TextBoxPasswrod.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxPasswrod.Location = new System.Drawing.Point(353, 44);
             this.TextBoxPasswrod.Name = "TextBoxPasswrod";
-            this.TextBoxPasswrod.ReadOnly = true;
+            this.TextBoxPasswrod.PasswordChar = '*';
             this.TextBoxPasswrod.Size = new System.Drawing.Size(135, 19);
-            this.TextBoxPasswrod.TabIndex = 1;
+            this.TextBoxPasswrod.TabIndex = 2;
             // 
             // LabelYUAN
             // 
