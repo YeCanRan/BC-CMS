@@ -60,6 +60,7 @@
             this.ButtonOK.TabIndex = 2;
             this.ButtonOK.Text = "确 定";
             this.ButtonOK.UseVisualStyleBackColor = false;
+            this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
             // 
             // LabelClass
             // 

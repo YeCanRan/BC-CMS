@@ -66,7 +66,7 @@ create table Member
 	Tel char(11) not null default '00000000000',
 	Address varchar(32) not null default '--',
 	HandleDate date not null,
-	HandlePerson char(6) not null foreign key references Employee(No),
+	HandlePerson char(6) not null,
 	Balance int not null default 0,
 	Remark text,
 )
@@ -141,7 +141,7 @@ create table Coupon
 	Class varchar(8) not null,
 	Discount int not null default 0,
 	Equivalent int not null default 0,
-	HandlePerson char(6) not null foreign key references Employee(No),
+	HandlePerson char(6) not null,
 	Numbers int not null default 0,
 	Remark text,
 )
@@ -187,21 +187,21 @@ if exists (select * from sys.objects where name = 'ViewEmployeeClass')
 drop view ViewEmployeeClass
 go
 create view ViewEmployeeClass as
-	select distinct Class from Employee 
+	select distinct Class from Employee where No!='100000'
 go
 
 if exists (select * from sys.objects where name = 'ViewPrice')
 drop view ViewPrice
 go
 create view ViewPrice as
-	select Name,Price from Price
+	select Name,Class,Price from Price
 go
 
 if exists (select * from sys.objects where name = 'ViewItem')
 drop view ViewItem
 go
 create view ViewItem as
-	select Class,Numbers,TotalReserves from Item
+	select Name,TotalReserves,Numbers from Item
 go
 
 if exists (select * from sys.objects where name = 'ViewCoupon')
@@ -304,4 +304,58 @@ go
 
 create procedure [dbo].[Recharge] @CardNo char(6),@Password char(32),@Balance int as
 	update Member set Balance+=@Balance where CardNo=@CardNo and Password=@Password
+go
+
+--删除员工
+if OBJECT_ID('EmployeeDelete','P') is not null
+drop procedure EmployeeDelete
+go
+
+create procedure [dbo].[EmployeeDelete] @No char(6) as
+	delete from Employee where No=@No
+go
+
+--提交员工修改信息
+if OBJECT_ID('SubmitEmployeeEdit','P') is not null
+drop procedure SubmitEmployeeEdit
+go
+
+create procedure [dbo].[SubmitEmployeeEdit] @No char(6),@Password char(32),@Name varchar(8),@Sex char(2),@Nation varchar(8),@Nativeplace varchar(16),@Political varchar(8),@Class varchar(8),@Shift int,@Salary int,@Tel char(11),@Address varchar(32),@PrivilegeLevel int,@IDCardNo char(18),@BankCardNo char(18),@BirthDay date,@MaritalStatus int,@DateOfEmployment date as
+	update Employee set Password=@Password,Name=@Name,Sex=@Sex,Nation=@Nation,Nativeplace=@Nativeplace,Political=@Political,Class=@Class,Shift=@Shift,Salary=@Salary,Tel=@Tel,Address=@Address,PrivilegeLevel=@PrivilegeLevel,IDCardNo=@IDCardNo,BankCardNo=@BankCardNo,BirthDay=@BirthDay,MaritalStatus=@MaritalStatus,DateOfEmployment=@DateOfEmployment where No=@No
+go
+
+--提交员工入职信息
+if OBJECT_ID('SubmitEntryHandle','P') is not null
+drop procedure SubmitEntryHandle
+go
+
+create procedure [dbo].[SubmitEntryHandle] @No char(6),@Password char(32),@Name varchar(8),@Sex char(2),@Nation varchar(8),@Nativeplace varchar(16),@Political varchar(8),@Class varchar(8),@Shift int,@Salary int,@Tel char(11),@Address varchar(32),@PrivilegeLevel int,@IDCardNo char(18),@BankCardNo char(18),@BirthDay date,@MaritalStatus int,@DateOfEmployment date as
+	insert into Employee values(@No,@Password,@Name,@Sex,@Nation,@Nativeplace,@Political,@Class,@Shift,@Salary,@Tel,@Address,@PrivilegeLevel,@IDCardNo,@BankCardNo,@BirthDay,@MaritalStatus,@DateOfEmployment,null)
+go
+
+--涨薪
+if OBJECT_ID('SalaryRise','P') is not null
+drop procedure SalaryRise
+go
+
+create procedure [dbo].[SalaryRise] @Class varchar(8),@Salary int as
+	update Employee set Salary+=@Salary where Class=@Class
+go
+
+--更改价格
+if OBJECT_ID('PriceChange','P') is not null
+drop procedure PriceChange
+go
+
+create procedure [dbo].[PriceChange] @Name varchar(16),@Price int as
+	update Price set Price=@Price,VIPPrice=@Price/2 where Name=@Name
+go
+
+--更改物资储量
+if OBJECT_ID('MaterialAdd','P') is not null
+drop procedure MaterialAdd
+go
+
+create procedure [dbo].[MaterialAdd] @Name varchar(8),@Numbers int as
+	update Item set Numbers+=@Numbers where Name=@Name
 go

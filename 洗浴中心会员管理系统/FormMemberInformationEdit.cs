@@ -24,8 +24,8 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SettleAccountsCmd = new SqlCommand("select * from ViewMemberInformationEdit where CardNo=" + MemberNo.Text.Substring(7), GlobalClass.Connection);
-                SqlDataReader data = SettleAccountsCmd.ExecuteReader();
+                SqlCommand MemberInformation = new SqlCommand("select * from ViewMemberInformationEdit where CardNo=" + MemberNo.Text.Substring(7), GlobalClass.Connection);
+                SqlDataReader data = MemberInformation.ExecuteReader();
                 data.Read();
                 this.TextBoxHandlePerson.Text = data[8].ToString();
                 this.TextBoxHandleDate.Text = data[7].ToString().Substring(0, 9);

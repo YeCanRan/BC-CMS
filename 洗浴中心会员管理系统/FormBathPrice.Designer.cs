@@ -33,7 +33,7 @@
             this.LabelOriginalPrice = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
-            this.ButtonSubmit = new System.Windows.Forms.Button();
+            this.ButtonClear = new System.Windows.Forms.Button();
             this.PanelPriceList = new System.Windows.Forms.Panel();
             this.PanelHead.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.PanelHead.Controls.Add(this.LabelOriginalPrice);
             this.PanelHead.Controls.Add(this.LabelName);
             this.PanelHead.Controls.Add(this.LabelID);
-            this.PanelHead.Controls.Add(this.ButtonSubmit);
+            this.PanelHead.Controls.Add(this.ButtonClear);
             this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHead.Location = new System.Drawing.Point(0, 0);
             this.PanelHead.Name = "PanelHead";
@@ -96,20 +96,21 @@
             this.LabelID.TabIndex = 18;
             this.LabelID.Text = "ID";
             // 
-            // ButtonSubmit
+            // ButtonClear
             // 
-            this.ButtonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
-            this.ButtonSubmit.FlatAppearance.BorderSize = 0;
-            this.ButtonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSubmit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonSubmit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonSubmit.Location = new System.Drawing.Point(893, 34);
-            this.ButtonSubmit.Name = "ButtonSubmit";
-            this.ButtonSubmit.Size = new System.Drawing.Size(80, 30);
-            this.ButtonSubmit.TabIndex = 1;
-            this.ButtonSubmit.Text = "提 交";
-            this.ButtonSubmit.UseVisualStyleBackColor = false;
+            this.ButtonClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonClear.FlatAppearance.BorderSize = 0;
+            this.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonClear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonClear.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonClear.Location = new System.Drawing.Point(893, 34);
+            this.ButtonClear.Name = "ButtonClear";
+            this.ButtonClear.Size = new System.Drawing.Size(80, 30);
+            this.ButtonClear.TabIndex = 1;
+            this.ButtonClear.Text = "清 空";
+            this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // PanelPriceList
             // 
@@ -144,6 +145,6 @@
         private System.Windows.Forms.Label LabelOriginalPrice;
         private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.Label LabelID;
-        private System.Windows.Forms.Button ButtonSubmit;
+        private System.Windows.Forms.Button ButtonClear;
     }
 }

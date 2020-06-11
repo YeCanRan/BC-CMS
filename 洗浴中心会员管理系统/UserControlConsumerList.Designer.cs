@@ -69,7 +69,7 @@
             this.LabelNo.AutoSize = true;
             this.LabelNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelNo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelNo.Location = new System.Drawing.Point(128, 21);
+            this.LabelNo.Location = new System.Drawing.Point(108, 21);
             this.LabelNo.Name = "LabelNo";
             this.LabelNo.Size = new System.Drawing.Size(32, 17);
             this.LabelNo.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.LabelSex.AutoSize = true;
             this.LabelSex.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelSex.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelSex.Location = new System.Drawing.Point(236, 21);
+            this.LabelSex.Location = new System.Drawing.Point(226, 21);
             this.LabelSex.Name = "LabelSex";
             this.LabelSex.Size = new System.Drawing.Size(32, 17);
             this.LabelSex.TabIndex = 1;

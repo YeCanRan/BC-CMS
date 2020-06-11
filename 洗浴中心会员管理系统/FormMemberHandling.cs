@@ -20,8 +20,8 @@ namespace 洗浴中心会员管理系统
             if (GlobalClass.Connection.State == ConnectionState.Open)
                 GlobalClass.Connection.Close();
             GlobalClass.Connection.Open();
-            SqlCommand SettleAccountsCmd = new SqlCommand("select CardNo from Member order by CardNo desc", GlobalClass.Connection);
-            SqlDataReader data = SettleAccountsCmd.ExecuteReader();
+            SqlCommand MemberHandlingCmd = new SqlCommand("select CardNo from Member order by CardNo desc", GlobalClass.Connection);
+            SqlDataReader data = MemberHandlingCmd.ExecuteReader();
             
             while(data.Read())
             {

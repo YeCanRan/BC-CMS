@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.TextBoxIncrement = new System.Windows.Forms.TextBox();
-            this.LabelClass = new System.Windows.Forms.Label();
+            this.LabelName = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
             this.ButtonOK = new System.Windows.Forms.Button();
             this.LabelTotalReserves = new System.Windows.Forms.Label();
@@ -46,16 +46,16 @@
             this.TextBoxIncrement.Size = new System.Drawing.Size(129, 22);
             this.TextBoxIncrement.TabIndex = 1;
             // 
-            // LabelClass
+            // LabelName
             // 
-            this.LabelClass.AutoSize = true;
-            this.LabelClass.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelClass.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelClass.Location = new System.Drawing.Point(82, 21);
-            this.LabelClass.Name = "LabelClass";
-            this.LabelClass.Size = new System.Drawing.Size(32, 17);
-            this.LabelClass.TabIndex = 13;
-            this.LabelClass.Text = "类别";
+            this.LabelName.AutoSize = true;
+            this.LabelName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelName.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LabelName.Location = new System.Drawing.Point(107, 21);
+            this.LabelName.Name = "LabelName";
+            this.LabelName.Size = new System.Drawing.Size(32, 17);
+            this.LabelName.TabIndex = 13;
+            this.LabelName.Text = "名称";
             // 
             // LabelID
             // 
@@ -82,6 +82,7 @@
             this.ButtonOK.TabIndex = 2;
             this.ButtonOK.Text = "确 定";
             this.ButtonOK.UseVisualStyleBackColor = false;
+            this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
             // 
             // LabelTotalReserves
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.TextBoxIncrement);
             this.Controls.Add(this.LabelCurrentReserve);
             this.Controls.Add(this.LabelTotalReserves);
-            this.Controls.Add(this.LabelClass);
+            this.Controls.Add(this.LabelName);
             this.Controls.Add(this.LabelID);
             this.Controls.Add(this.ButtonOK);
             this.Name = "UserControlMaterialList";
@@ -126,7 +127,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox TextBoxIncrement;
-        private System.Windows.Forms.Label LabelClass;
+        private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.Label LabelID;
         private System.Windows.Forms.Button ButtonOK;
         private System.Windows.Forms.Label LabelTotalReserves;
