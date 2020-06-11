@@ -35,7 +35,7 @@
             this.LabelDiscount = new System.Windows.Forms.Label();
             this.LabelClass = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
-            this.ButtonAddLeaflets = new System.Windows.Forms.Button();
+            this.ButtonAddLeaflet = new System.Windows.Forms.Button();
             this.ButtonAddBathCoupon = new System.Windows.Forms.Button();
             this.ButtonAddDiscountCoupon = new System.Windows.Forms.Button();
             this.ButtonAddCashCoupon = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.PanelHead.Controls.Add(this.LabelDiscount);
             this.PanelHead.Controls.Add(this.LabelClass);
             this.PanelHead.Controls.Add(this.LabelID);
-            this.PanelHead.Controls.Add(this.ButtonAddLeaflets);
+            this.PanelHead.Controls.Add(this.ButtonAddLeaflet);
             this.PanelHead.Controls.Add(this.ButtonAddBathCoupon);
             this.PanelHead.Controls.Add(this.ButtonAddDiscountCoupon);
             this.PanelHead.Controls.Add(this.ButtonAddCashCoupon);
@@ -128,20 +128,21 @@
             this.LabelID.TabIndex = 6;
             this.LabelID.Text = "ID";
             // 
-            // ButtonAddLeaflets
+            // ButtonAddLeaflet
             // 
-            this.ButtonAddLeaflets.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonAddLeaflets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
-            this.ButtonAddLeaflets.FlatAppearance.BorderSize = 0;
-            this.ButtonAddLeaflets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAddLeaflets.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonAddLeaflets.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonAddLeaflets.Location = new System.Drawing.Point(593, 37);
-            this.ButtonAddLeaflets.Name = "ButtonAddLeaflets";
-            this.ButtonAddLeaflets.Size = new System.Drawing.Size(80, 30);
-            this.ButtonAddLeaflets.TabIndex = 1;
-            this.ButtonAddLeaflets.Text = "添加宣传单";
-            this.ButtonAddLeaflets.UseVisualStyleBackColor = false;
+            this.ButtonAddLeaflet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonAddLeaflet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonAddLeaflet.FlatAppearance.BorderSize = 0;
+            this.ButtonAddLeaflet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAddLeaflet.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonAddLeaflet.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonAddLeaflet.Location = new System.Drawing.Point(593, 37);
+            this.ButtonAddLeaflet.Name = "ButtonAddLeaflet";
+            this.ButtonAddLeaflet.Size = new System.Drawing.Size(80, 30);
+            this.ButtonAddLeaflet.TabIndex = 1;
+            this.ButtonAddLeaflet.Text = "添加宣传单";
+            this.ButtonAddLeaflet.UseVisualStyleBackColor = false;
+            this.ButtonAddLeaflet.Click += new System.EventHandler(this.ButtonAddLeaflet_Click);
             // 
             // ButtonAddBathCoupon
             // 
@@ -157,6 +158,7 @@
             this.ButtonAddBathCoupon.TabIndex = 2;
             this.ButtonAddBathCoupon.Text = "添加浴资券";
             this.ButtonAddBathCoupon.UseVisualStyleBackColor = false;
+            this.ButtonAddBathCoupon.Click += new System.EventHandler(this.ButtonAddBathCoupon_Click);
             // 
             // ButtonAddDiscountCoupon
             // 
@@ -172,6 +174,7 @@
             this.ButtonAddDiscountCoupon.TabIndex = 3;
             this.ButtonAddDiscountCoupon.Text = "添加打折券";
             this.ButtonAddDiscountCoupon.UseVisualStyleBackColor = false;
+            this.ButtonAddDiscountCoupon.Click += new System.EventHandler(this.ButtonAddDiscountCoupon_Click);
             // 
             // ButtonAddCashCoupon
             // 
@@ -187,6 +190,7 @@
             this.ButtonAddCashCoupon.TabIndex = 4;
             this.ButtonAddCashCoupon.Text = "添加代金券";
             this.ButtonAddCashCoupon.UseVisualStyleBackColor = false;
+            this.ButtonAddCashCoupon.Click += new System.EventHandler(this.ButtonAddCashCoupon_Click);
             // 
             // PanelCouponList
             // 
@@ -219,7 +223,7 @@
         private System.Windows.Forms.Panel PanelHead;
         private System.Windows.Forms.Button ButtonAddCashCoupon;
         private System.Windows.Forms.Panel PanelCouponList;
-        private System.Windows.Forms.Button ButtonAddLeaflets;
+        private System.Windows.Forms.Button ButtonAddLeaflet;
         private System.Windows.Forms.Button ButtonAddBathCoupon;
         private System.Windows.Forms.Button ButtonAddDiscountCoupon;
         private System.Windows.Forms.Label LabelID;

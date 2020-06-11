@@ -355,3 +355,5 @@ insert into Coupon(Class,Discount,Equivalent,HandlePerson,Numbers,Remark) values
 go
 insert into Coupon(Class,Discount,Equivalent,HandlePerson,Numbers,Remark) values('‘°◊ »Ø',10,25,'100002',600,null)
 go
+insert into Coupon(Class,Discount,Equivalent,HandlePerson,Numbers,Remark) values('¥Ú’€»Ø',7,0,'100002',500,null)
+go

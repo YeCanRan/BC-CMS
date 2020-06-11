@@ -53,11 +53,23 @@
     <Compile Include="FormBasicConsumption.Designer.cs">
       <DependentUpon>FormBasicConsumption.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBathCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBathCoupon.Designer.cs">
+      <DependentUpon>FormBathCoupon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBathPrice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBathPrice.Designer.cs">
       <DependentUpon>FormBathPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCashCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCashCoupon.Designer.cs">
+      <DependentUpon>FormCashCoupon.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCouponIssue.cs">
       <SubType>Form</SubType>
@@ -70,6 +82,12 @@
     </Compile>
     <Compile Include="FormDataReport.Designer.cs">
       <DependentUpon>FormDataReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiscountCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiscountCoupon.Designer.cs">
+      <DependentUpon>FormDiscountCoupon.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEmployeeInformation.cs">
       <SubType>Form</SubType>
@@ -88,6 +106,12 @@
     </Compile>
     <Compile Include="FormEntryHandling.Designer.cs">
       <DependentUpon>FormEntryHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeaflet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeaflet.Designer.cs">
+      <DependentUpon>FormLeaflet.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -221,14 +245,23 @@
     <EmbeddedResource Include="FormBasicConsumption.resx">
       <DependentUpon>FormBasicConsumption.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBathCoupon.resx">
+      <DependentUpon>FormBathCoupon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBathPrice.resx">
       <DependentUpon>FormBathPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCashCoupon.resx">
+      <DependentUpon>FormCashCoupon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCouponIssue.resx">
       <DependentUpon>FormCouponIssue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataReport.resx">
       <DependentUpon>FormDataReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiscountCoupon.resx">
+      <DependentUpon>FormDiscountCoupon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEmployeeInformation.resx">
       <DependentUpon>FormEmployeeInformation.cs</DependentUpon>
@@ -238,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntryHandling.resx">
       <DependentUpon>FormEntryHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeaflet.resx">
+      <DependentUpon>FormLeaflet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -312,6 +348,9 @@
     <EmbeddedResource Include="UserControlSalaryRiseList.resx">
       <DependentUpon>UserControlSalaryRiseList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

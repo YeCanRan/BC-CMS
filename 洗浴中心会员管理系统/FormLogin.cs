@@ -67,30 +67,35 @@ namespace 洗浴中心会员管理系统
                     if (ReturnValue == 0)
                     {
                         GlobalClass.UserName = TextBoxAccount.Text;
+                        GlobalClass.EmployeeNo = TextBoxAccount.Text;
                         GlobalClass.PrivilegeLevel = (int)GlobalClass.Privilege.Administrator;
                         this.TimerProgressBar.Start();
                     }
                     else if (ReturnValue == 1)
                     {
                         GlobalClass.UserName = TextBoxAccount.Text;
+                        GlobalClass.EmployeeNo = TextBoxAccount.Text;
                         GlobalClass.PrivilegeLevel = (int)GlobalClass.Privilege.Director;
                         this.TimerProgressBar.Start();
                     }
                     else if (ReturnValue == 2)
                     {
                         GlobalClass.UserName = TextBoxAccount.Text;
+                        GlobalClass.EmployeeNo = TextBoxAccount.Text;
                         GlobalClass.PrivilegeLevel = (int)GlobalClass.Privilege.Manager;
                         this.TimerProgressBar.Start();
                     }
                     else if (ReturnValue == 3)
                     {
                         GlobalClass.UserName = TextBoxAccount.Text;
+                        GlobalClass.EmployeeNo = TextBoxAccount.Text;
                         GlobalClass.PrivilegeLevel = (int)GlobalClass.Privilege.Reception;
                         this.TimerProgressBar.Start();
                     }
                     else if (ReturnValue == 4)
                     {
                         GlobalClass.UserName = TextBoxAccount.Text;
+                        GlobalClass.EmployeeNo = TextBoxAccount.Text;
                         GlobalClass.PrivilegeLevel = (int)GlobalClass.Privilege.Logistics;
                         this.TimerProgressBar.Start();
                     }

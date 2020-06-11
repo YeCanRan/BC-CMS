@@ -208,7 +208,7 @@ if exists (select * from sys.objects where name = 'ViewCoupon')
 drop view ViewCoupon
 go
 create view ViewCoupon as
-	select Class,Discount,Equivalent,Numbers,HandlePerson from Coupon
+	select No,Class,Discount,Equivalent,Numbers,HandlePerson from Coupon
 go
 
 if exists (select * from sys.objects where name = 'ViewConsumerNumbers')
@@ -358,4 +358,49 @@ go
 
 create procedure [dbo].[MaterialAdd] @Name varchar(8),@Numbers int as
 	update Item set Numbers+=@Numbers where Name=@Name
+go
+
+--删除奖券
+if OBJECT_ID('CouponDelete','P') is not null
+drop procedure CouponDelete
+go
+
+create procedure [dbo].[CouponDelete] @No int as
+	delete from Coupon where No=@No
+go
+
+--添加宣传券
+if OBJECT_ID('AddLeaflet','P') is not null
+drop procedure AddLeaflet
+go
+
+create procedure [dbo].[AddLeaflet] @Class varchar(8),@HandlePerson char(6),@Numbers int as
+	insert into Coupon values(@Class,10,0,@HandlePerson,@Numbers,null)
+go
+
+--添加浴资券
+if OBJECT_ID('AddBathCoupon','P') is not null
+drop procedure AddBathCoupon
+go
+
+create procedure [dbo].[AddBathCoupon] @Class varchar(8),@HandlePerson char(6),@Numbers int as
+	insert into Coupon values(@Class,10,25,@HandlePerson,@Numbers,null)
+go
+
+--添加打折券
+if OBJECT_ID('AddDiscountCoupon','P') is not null
+drop procedure AddDiscountCoupon
+go
+
+create procedure [dbo].[AddDiscountCoupon] @Class varchar(8),@Discount int,@HandlePerson char(6),@Numbers int as
+	insert into Coupon values(@Class,@Discount,0,@HandlePerson,@Numbers,null)
+go
+
+--添加代金券
+if OBJECT_ID('AddCashCoupon','P') is not null
+drop procedure AddCashCoupon
+go
+
+create procedure [dbo].[AddCashCoupon] @Class varchar(8),@Equivalent int,@HandlePerson char(6),@Numbers int as
+	insert into Coupon values(@Class,10,@Equivalent,@HandlePerson,@Numbers,null)
 go

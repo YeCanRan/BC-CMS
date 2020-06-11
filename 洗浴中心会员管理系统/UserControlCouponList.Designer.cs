@@ -32,7 +32,7 @@
             this.LabelEquivalent = new System.Windows.Forms.Label();
             this.LabelDiscount = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
-            this.ButtonChoose = new System.Windows.Forms.Button();
+            this.ButtonDelete = new System.Windows.Forms.Button();
             this.LabelClass = new System.Windows.Forms.Label();
             this.LabelEmpNo = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.LabelEquivalent.AutoSize = true;
             this.LabelEquivalent.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelEquivalent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelEquivalent.Location = new System.Drawing.Point(281, 21);
+            this.LabelEquivalent.Location = new System.Drawing.Point(296, 21);
             this.LabelEquivalent.Name = "LabelEquivalent";
             this.LabelEquivalent.Size = new System.Drawing.Size(44, 17);
             this.LabelEquivalent.TabIndex = 4;
@@ -64,7 +64,7 @@
             this.LabelDiscount.AutoSize = true;
             this.LabelDiscount.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelDiscount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LabelDiscount.Location = new System.Drawing.Point(177, 21);
+            this.LabelDiscount.Location = new System.Drawing.Point(192, 21);
             this.LabelDiscount.Name = "LabelDiscount";
             this.LabelDiscount.Size = new System.Drawing.Size(56, 17);
             this.LabelDiscount.TabIndex = 6;
@@ -81,20 +81,21 @@
             this.LabelID.TabIndex = 8;
             this.LabelID.Text = "ID";
             // 
-            // ButtonChoose
+            // ButtonDelete
             // 
-            this.ButtonChoose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonChoose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
-            this.ButtonChoose.FlatAppearance.BorderSize = 0;
-            this.ButtonChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonChoose.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonChoose.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonChoose.Location = new System.Drawing.Point(893, 14);
-            this.ButtonChoose.Name = "ButtonChoose";
-            this.ButtonChoose.Size = new System.Drawing.Size(80, 30);
-            this.ButtonChoose.TabIndex = 1;
-            this.ButtonChoose.Text = "选 择";
-            this.ButtonChoose.UseVisualStyleBackColor = false;
+            this.ButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.ButtonDelete.FlatAppearance.BorderSize = 0;
+            this.ButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonDelete.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtonDelete.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonDelete.Location = new System.Drawing.Point(893, 14);
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.Size = new System.Drawing.Size(80, 30);
+            this.ButtonDelete.TabIndex = 1;
+            this.ButtonDelete.Text = "删 除";
+            this.ButtonDelete.UseVisualStyleBackColor = false;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // LabelClass
             // 
@@ -129,7 +130,7 @@
             this.Controls.Add(this.LabelDiscount);
             this.Controls.Add(this.LabelClass);
             this.Controls.Add(this.LabelID);
-            this.Controls.Add(this.ButtonChoose);
+            this.Controls.Add(this.ButtonDelete);
             this.Name = "UserControlCouponList";
             this.Size = new System.Drawing.Size(1014, 58);
             this.ResumeLayout(false);
@@ -143,7 +144,7 @@
         private System.Windows.Forms.Label LabelEquivalent;
         private System.Windows.Forms.Label LabelDiscount;
         private System.Windows.Forms.Label LabelID;
-        private System.Windows.Forms.Button ButtonChoose;
+        private System.Windows.Forms.Button ButtonDelete;
         private System.Windows.Forms.Label LabelClass;
         private System.Windows.Forms.Label LabelEmpNo;
     }

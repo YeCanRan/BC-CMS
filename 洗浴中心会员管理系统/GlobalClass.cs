@@ -12,7 +12,7 @@ namespace 洗浴中心会员管理系统
     {
         public static string StrCnn;
         public static string UserName;
-        public static string EmployeeNo;
+        public static string EmployeeNo="100000";
         public static int PrivilegeLevel;
         public enum Privilege{ Administrator, Director, Manager , Reception, Logistics, Staff };
         public static SqlConnection Connection = new SqlConnection();
