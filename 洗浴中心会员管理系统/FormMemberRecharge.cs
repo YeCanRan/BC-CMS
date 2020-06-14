@@ -73,7 +73,6 @@ namespace 洗浴中心会员管理系统
                         i++;
                     }
                     GlobalClass.Connection.Close();
-                    this.Close();
                 }
                 else
                 {
