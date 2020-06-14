@@ -220,6 +220,7 @@
             this.TextBoxHandlePerson.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxHandlePerson.Location = new System.Drawing.Point(124, 150);
             this.TextBoxHandlePerson.Name = "TextBoxHandlePerson";
+            this.TextBoxHandlePerson.ReadOnly = true;
             this.TextBoxHandlePerson.Size = new System.Drawing.Size(370, 22);
             this.TextBoxHandlePerson.TabIndex = 1;
             // 
@@ -307,6 +308,7 @@
             this.TextBoxHandleDate.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxHandleDate.Location = new System.Drawing.Point(607, 150);
             this.TextBoxHandleDate.Name = "TextBoxHandleDate";
+            this.TextBoxHandleDate.ReadOnly = true;
             this.TextBoxHandleDate.Size = new System.Drawing.Size(370, 22);
             this.TextBoxHandleDate.TabIndex = 2;
             // 

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,23 +27,28 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand AddBathCouponCmd = new SqlCommand("AddBathCoupon", GlobalClass.Connection);
-                AddBathCouponCmd.CommandType = CommandType.StoredProcedure;
-                AddBathCouponCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
-                AddBathCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
-                AddBathCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
-                AddBathCouponCmd.Parameters[0].Value = LabelBathCoupon.Text;
-                AddBathCouponCmd.Parameters[1].Value = GlobalClass.EmployeeNo;
-                AddBathCouponCmd.Parameters[2].Value = Convert.ToInt32(TextBoxNumbers.Text);
-                if (AddBathCouponCmd.ExecuteNonQuery() == 1)
+                if (Regex.IsMatch(TextBoxNumbers.Text, @"\d+"))
                 {
-                    MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlCommand AddBathCouponCmd = new SqlCommand("AddBathCoupon", GlobalClass.Connection);
+                    AddBathCouponCmd.CommandType = CommandType.StoredProcedure;
+                    AddBathCouponCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
+                    AddBathCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
+                    AddBathCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
+                    AddBathCouponCmd.Parameters[0].Value = LabelBathCoupon.Text;
+                    AddBathCouponCmd.Parameters[1].Value = GlobalClass.EmployeeNo;
+                    AddBathCouponCmd.Parameters[2].Value = Convert.ToInt32(TextBoxNumbers.Text);
+                    if (AddBathCouponCmd.ExecuteNonQuery() == 1)
+                        MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxNumbers.Text = String.Empty;
+                    TextBoxNumbers.Focus();
                 }
-                this.Close();
             }
             catch (Exception ex)
             {

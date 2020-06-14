@@ -145,7 +145,7 @@
             this.LabelAmountOfMoneyNeed.Name = "LabelAmountOfMoneyNeed";
             this.LabelAmountOfMoneyNeed.Size = new System.Drawing.Size(72, 20);
             this.LabelAmountOfMoneyNeed.TabIndex = 0;
-            this.LabelAmountOfMoneyNeed.Text = "应付金额 :";
+            this.LabelAmountOfMoneyNeed.Text = "总计金额 :";
             // 
             // TextBoxCardNumber
             // 
@@ -153,6 +153,7 @@
             this.TextBoxCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxCardNumber.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxCardNumber.Location = new System.Drawing.Point(106, 44);
+            this.TextBoxCardNumber.MaxLength = 6;
             this.TextBoxCardNumber.Name = "TextBoxCardNumber";
             this.TextBoxCardNumber.Size = new System.Drawing.Size(135, 19);
             this.TextBoxCardNumber.TabIndex = 1;

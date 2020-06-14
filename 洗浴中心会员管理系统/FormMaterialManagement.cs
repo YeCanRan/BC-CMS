@@ -44,32 +44,17 @@ namespace 洗浴中心会员管理系统
                     i++;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 GlobalClass.Connection.Close();
             }
-            /*int MaterialNumbers = 9;
-            for (int i = 0; i < MaterialNumbers; i++)
-            {
-                MaterialList.Add(new 洗浴中心会员管理系统.UserControlMaterialList());
-                this.PanelMaterialList.Controls.Add((UserControlMaterialList)MaterialList[i]);
-                ((UserControlMaterialList)MaterialList[i]).Size = new System.Drawing.Size(1014, 58);
-                ((UserControlMaterialList)MaterialList[i]).Dock = System.Windows.Forms.DockStyle.Top;
-                ((UserControlMaterialList)MaterialList[i]).Location = new System.Drawing.Point(0, 58 * i);
-                ((UserControlMaterialList)MaterialList[i]).Name = "MaterialList" + i;
-                if (i % 2 == 0)
-                    ((UserControlMaterialList)MaterialList[i]).BackColor = Color.FromArgb(25, 20, 25);
-                ((UserControlMaterialList)MaterialList[i]).Controls["LabelID"].Text = (MaterialNumbers - i).ToString();
-            }*/
         }
 
         private void ButtonClear_Click(object sender, EventArgs e)
         {
             for (int j = 0; j < i; j++)
-            {
                 ((UserControlMaterialList)MaterialList[j]).Controls["TextBoxIncrement"].Text = String.Empty;
-            }
         }
     }
 }

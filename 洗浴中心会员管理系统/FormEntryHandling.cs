@@ -116,7 +116,7 @@ namespace 洗浴中心会员管理系统
                     SubmitCmd.Parameters.Add("@BirthDay", SqlDbType.Date);
                     SubmitCmd.Parameters.Add("@MaritalStatus", SqlDbType.Int);
                     SubmitCmd.Parameters.Add("@DateOfEmployment", SqlDbType.Date);
-                    SubmitCmd.Parameters[0].Value = (LastNo+1).ToString();
+                    SubmitCmd.Parameters[0].Value = (LastNo + 1).ToString();
                     SubmitCmd.Parameters[1].Value = GlobalClass.MD5(TextBoxPassword.Text);
                     SubmitCmd.Parameters[2].Value = TextBoxName.Text;
                     if (RadioButtonMan.Checked == true)

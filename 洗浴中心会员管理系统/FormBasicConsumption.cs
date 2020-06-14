@@ -37,7 +37,7 @@ namespace 洗浴中心会员管理系统
                     ((UserControlPriceList)PriceList[i]).Name = "PriceList" + i;
                     if (i % 2 == 0)
                         ((UserControlPriceList)PriceList[i]).BackColor = Color.FromArgb(25, 20, 25);
-                    ((UserControlPriceList)PriceList[i]).Controls["LabelID"].Text = (i+1).ToString();
+                    ((UserControlPriceList)PriceList[i]).Controls["LabelID"].Text = (i + 1).ToString();
                     ((UserControlPriceList)PriceList[i]).Controls["LabelName"].Text = data[0].ToString();
                     ((UserControlPriceList)PriceList[i]).Controls["TextBoxOriginalPrice"].Text = data[2].ToString();
                     i++;
@@ -53,9 +53,7 @@ namespace 洗浴中心会员管理系统
         private void ButtonClear_Click(object sender, EventArgs e)
         {
             for (int j = 0; j < i; j++)
-            {
                 ((UserControlPriceList)PriceList[j]).Controls["TextBoxPresentPrice"].Text = String.Empty;
-            }
         }
     }
 }

@@ -215,7 +215,7 @@ if exists (select * from sys.objects where name = 'ViewConsumerNumbers')
 drop view ViewConsumerNumbers
 go
 create view ViewConsumerNumbers as
-	select COUNT(No) as ConsumerNumbers from Coupon
+	select COUNT(No) as ConsumerNumbers from Consumer
 go
 
 if exists (select * from sys.objects where name = 'ViewItemNumbers')
@@ -236,7 +236,7 @@ if exists (select * from sys.objects where name = 'ViewExpenditure')
 drop view ViewExpenditure
 go
 create view ViewExpenditure as
-	select Price,Date from Revenue where RevenuesOrExpenditure=1
+	select Price,Class,Date from Revenue where RevenuesOrExpenditure=1
 go
 
 --创建存储过程

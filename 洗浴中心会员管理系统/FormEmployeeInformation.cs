@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,7 +43,7 @@ namespace 洗浴中心会员管理系统
                     ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelSex"].Text = data[2].ToString();
                     ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelTel"].Text = data[3].ToString();
                     ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelAddress"].Text = data[4].ToString();
-                    ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelDateOfEmployment"].Text = data[5].ToString().Substring(0,9);
+                    ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelDateOfEmployment"].Text = data[5].ToString().Substring(0, 9);
                     ((UserControlEmployeeList)EmployeeList[i]).Controls["LabelBankCardNo"].Text = data[6].ToString();
                     i++;
                 }
@@ -52,18 +53,6 @@ namespace 洗浴中心会员管理系统
                 MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 GlobalClass.Connection.Close();
             }
-            /*int EmployeeNumbers = 30;
-            for (int i = 0; i < EmployeeNumbers; i++)
-            {
-                EmployeeList.Add(new 洗浴中心会员管理系统.UserControlEmployeeList());
-                this.PanelEmployeeList.Controls.Add((UserControlEmployeeList)EmployeeList[i]);
-                ((UserControlEmployeeList)EmployeeList[i]).Size = new System.Drawing.Size(1014, 58);
-                ((UserControlEmployeeList)EmployeeList[i]).Dock = System.Windows.Forms.DockStyle.Top;
-                ((UserControlEmployeeList)EmployeeList[i]).Location = new System.Drawing.Point(0, 58 * i);
-                ((UserControlEmployeeList)EmployeeList[i]).Name = "EmployeeList" + i;
-                if (i % 2 == 0)
-                    ((UserControlEmployeeList)EmployeeList[i]).BackColor = Color.FromArgb(25, 20, 25);
-            }*/
         }
 
         private void ButtonSearchByEmployeeNo_Click(object sender, EventArgs e)
@@ -73,18 +62,27 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SearchByNoCmd = new SqlCommand("select * from ViewEmployeeInformation where No="+TextBoxEmployeeNo.Text,GlobalClass.Connection);
-                SqlDataReader data = SearchByNoCmd.ExecuteReader();
-                data.Read();
-                for (int i = 0; i < EmployeeList.Count; i++)
+                if (Regex.IsMatch(TextBoxEmployeeNo.Text, @"1\d{5}"))
                 {
-                    if (((UserControlEmployeeList)EmployeeList[i]).Controls["LabelEmployeeNo"].Text == data[0].ToString())
+                    SqlCommand SearchByNoCmd = new SqlCommand("select * from ViewEmployeeInformation where No=" + TextBoxEmployeeNo.Text, GlobalClass.Connection);
+                    SqlDataReader data = SearchByNoCmd.ExecuteReader();
+                    data.Read();
+                    for (int i = 0; i < EmployeeList.Count; i++)
                     {
-                        this.PanelEmployeeList.Controls.Clear();
-                        this.PanelEmployeeList.Controls.Add((UserControlEmployeeList)EmployeeList[i]);
+                        if (((UserControlEmployeeList)EmployeeList[i]).Controls["LabelEmployeeNo"].Text == data[0].ToString())
+                        {
+                            this.PanelEmployeeList.Controls.Clear();
+                            this.PanelEmployeeList.Controls.Add((UserControlEmployeeList)EmployeeList[i]);
+                        }
                     }
+                    data.Close();
                 }
-                data.Close();
+                else
+                {
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxEmployeeNo.Text = String.Empty;
+                    TextBoxEmployeeNo.Focus();
+                }
             }
             catch (Exception ex)
             {
@@ -100,17 +98,27 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SearchByTelCmd = new SqlCommand("select * from ViewEmployeeInformation where Tel="+TextBoxTel.Text,GlobalClass.Connection);
-                SqlDataReader data = SearchByTelCmd.ExecuteReader();
-                data.Read();
-                for (int i = 0; i < EmployeeList.Count; i++)
+                if (Regex.IsMatch(TextBoxTel.Text, @"1\d{10}"))
                 {
-                    if (((UserControlEmployeeList)EmployeeList[i]).Controls["LabelTel"].Text == data[3].ToString())
+                    SqlCommand SearchByTelCmd = new SqlCommand("select * from ViewEmployeeInformation where Tel=" + TextBoxTel.Text, GlobalClass.Connection);
+                    SqlDataReader data = SearchByTelCmd.ExecuteReader();
+                    data.Read();
+                    for (int i = 0; i < EmployeeList.Count; i++)
                     {
-                        this.PanelEmployeeList.Controls.Clear();
-                        this.PanelEmployeeList.Controls.Add((UserControlEmployeeList)EmployeeList[i]);
+                        if (((UserControlEmployeeList)EmployeeList[i]).Controls["LabelTel"].Text == data[3].ToString())
+                        {
+                            this.PanelEmployeeList.Controls.Clear();
+                            this.PanelEmployeeList.Controls.Add((UserControlEmployeeList)EmployeeList[i]);
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxTel.Text = String.Empty;
+                    TextBoxTel.Focus();
+                }
+
             }
             catch (Exception ex)
             {

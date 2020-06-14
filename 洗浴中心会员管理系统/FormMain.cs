@@ -37,6 +37,7 @@ namespace 洗浴中心会员管理系统
             if (PanelPriceManagement.Visible == true)
                 PanelPriceManagement.Visible = false;
         }
+
         //打开点击的子面板，其它面板收缩起来，再次点击收缩此面板。
         private void ShowSubMenu(Panel SubMenu)
         {
@@ -50,6 +51,7 @@ namespace 洗浴中心会员管理系统
                 SubMenu.Visible = false;
             }
         }
+
         /// <summary>
         /// 在主菜单的右侧显示子窗口。
         /// </summary>
@@ -57,7 +59,6 @@ namespace 洗浴中心会员管理系统
         private void OpenChildForm(Form ChildForm)
         {
             ChildForm.TopLevel = false;
-            //ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
             PanelChildForm.Controls.Clear();
             PanelChildForm.Controls.Add(ChildForm);

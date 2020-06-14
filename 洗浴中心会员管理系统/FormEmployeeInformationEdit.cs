@@ -47,7 +47,7 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand EmployeeInformation = new SqlCommand("select * from ViewEmployeeInformationEdit where No="+EmployeeNo.Text,GlobalClass.Connection);
+                SqlCommand EmployeeInformation = new SqlCommand("select * from ViewEmployeeInformationEdit where No=" + EmployeeNo.Text, GlobalClass.Connection);
                 SqlDataReader data = EmployeeInformation.ExecuteReader();
                 data.Read();
                 this.TextBoxName.Text = data[2].ToString();
@@ -64,7 +64,7 @@ namespace 洗浴中心会员管理系统
                 this.ComboBoxPrivilegeLevel.SelectedItem = data[12].ToString();
                 this.TextBoxPolitical.Text = data[6].ToString();
                 this.ComboBoxClass.SelectedItem = data[7].ToString();
-                this.TextBoxBirthDay.Text = data[15].ToString().Substring(0,9);
+                this.TextBoxBirthDay.Text = data[15].ToString().Substring(0, 9);
                 this.TextBoxIDCardNo.Text = data[13].ToString();
                 this.TextBoxNation.Text = data[4].ToString();
                 this.TextBoxNativePlace.Text = data[5].ToString();
@@ -80,7 +80,7 @@ namespace 洗浴中心会员管理系统
                     this.ComboBoxMaritalStatus.SelectedItem = "未婚";
                 else
                     this.ComboBoxMaritalStatus.SelectedItem = "已婚";
-                this.TextBoxDateOfEmployment.Text = data[17].ToString().Substring(0,9);
+                this.TextBoxDateOfEmployment.Text = data[17].ToString().Substring(0, 9);
             }
             catch (Exception ex)
             {
@@ -140,24 +140,24 @@ namespace 洗浴中心会员管理系统
                     GlobalClass.Connection.Open();
                     SqlCommand SubmitCmd = new SqlCommand("SubmitEmployeeEdit", GlobalClass.Connection);
                     SubmitCmd.CommandType = CommandType.StoredProcedure;
-                    SubmitCmd.Parameters.Add("@No",SqlDbType.NChar,6);
-                    SubmitCmd.Parameters.Add("@Password",SqlDbType.NChar,32);
-                    SubmitCmd.Parameters.Add("@Name",SqlDbType.VarChar,8);
-                    SubmitCmd.Parameters.Add("@Sex",SqlDbType.NChar,2);
-                    SubmitCmd.Parameters.Add("@Nation",SqlDbType.VarChar,8);
-                    SubmitCmd.Parameters.Add("@NativePlace",SqlDbType.VarChar,16);
-                    SubmitCmd.Parameters.Add("@Political",SqlDbType.VarChar,8);
-                    SubmitCmd.Parameters.Add("@Class",SqlDbType.VarChar,8);
-                    SubmitCmd.Parameters.Add("@Shift",SqlDbType.Int);
-                    SubmitCmd.Parameters.Add("@Salary",SqlDbType.Int);
-                    SubmitCmd.Parameters.Add("@Tel",SqlDbType.NChar,11);
-                    SubmitCmd.Parameters.Add("@Address",SqlDbType.VarChar,32);
-                    SubmitCmd.Parameters.Add("@PrivilegeLevel",SqlDbType.Int);
-                    SubmitCmd.Parameters.Add("@IDCardNo",SqlDbType.NChar,18);
-                    SubmitCmd.Parameters.Add("@BankCardNo",SqlDbType.NChar,19);
-                    SubmitCmd.Parameters.Add("@BirthDay",SqlDbType.Date);
-                    SubmitCmd.Parameters.Add("@MaritalStatus",SqlDbType.Int);
-                    SubmitCmd.Parameters.Add("@DateOfEmployment",SqlDbType.Date);
+                    SubmitCmd.Parameters.Add("@No", SqlDbType.NChar, 6);
+                    SubmitCmd.Parameters.Add("@Password", SqlDbType.NChar, 32);
+                    SubmitCmd.Parameters.Add("@Name", SqlDbType.VarChar, 8);
+                    SubmitCmd.Parameters.Add("@Sex", SqlDbType.NChar, 2);
+                    SubmitCmd.Parameters.Add("@Nation", SqlDbType.VarChar, 8);
+                    SubmitCmd.Parameters.Add("@NativePlace", SqlDbType.VarChar, 16);
+                    SubmitCmd.Parameters.Add("@Political", SqlDbType.VarChar, 8);
+                    SubmitCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
+                    SubmitCmd.Parameters.Add("@Shift", SqlDbType.Int);
+                    SubmitCmd.Parameters.Add("@Salary", SqlDbType.Int);
+                    SubmitCmd.Parameters.Add("@Tel", SqlDbType.NChar, 11);
+                    SubmitCmd.Parameters.Add("@Address", SqlDbType.VarChar, 32);
+                    SubmitCmd.Parameters.Add("@PrivilegeLevel", SqlDbType.Int);
+                    SubmitCmd.Parameters.Add("@IDCardNo", SqlDbType.NChar, 18);
+                    SubmitCmd.Parameters.Add("@BankCardNo", SqlDbType.NChar, 19);
+                    SubmitCmd.Parameters.Add("@BirthDay", SqlDbType.Date);
+                    SubmitCmd.Parameters.Add("@MaritalStatus", SqlDbType.Int);
+                    SubmitCmd.Parameters.Add("@DateOfEmployment", SqlDbType.Date);
                     SubmitCmd.Parameters[0].Value = TempRef.Text;
                     SubmitCmd.Parameters[1].Value = TextBoxPassword.Text;
                     SubmitCmd.Parameters[2].Value = TextBoxName.Text;
@@ -173,7 +173,6 @@ namespace 洗浴中心会员管理系统
                         SubmitCmd.Parameters[8].Value = 0;
                     else if (ComboBoxShift.Text == "夜班")
                         SubmitCmd.Parameters[8].Value = 1;
-                    //SubmitCmd.Parameters[8].Value = ComboBoxShift.Text;
                     SubmitCmd.Parameters[9].Value = TextBoxSalary.Text;
                     SubmitCmd.Parameters[10].Value = TextBoxTel.Text;
                     SubmitCmd.Parameters[11].Value = TextBoxAddress.Text;
@@ -185,7 +184,6 @@ namespace 洗浴中心会员管理系统
                         SubmitCmd.Parameters[16].Value = 0;
                     else if (ComboBoxMaritalStatus.Text == "已婚")
                         SubmitCmd.Parameters[16].Value = 1;
-                    //SubmitCmd.Parameters[16].Value = ComboBoxMaritalStatus.Text;
                     SubmitCmd.Parameters[17].Value = TextBoxDateOfEmployment.Text;
                     if (SubmitCmd.ExecuteNonQuery() == 1)
                     {
@@ -202,9 +200,7 @@ namespace 洗浴中心会员管理系统
                 }
             }
             else
-            {
                 MessageBox.Show("信息不完整!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
     }
 }

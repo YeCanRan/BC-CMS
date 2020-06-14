@@ -22,14 +22,13 @@ namespace 洗浴中心会员管理系统
             GlobalClass.Connection.Open();
             SqlCommand MemberHandlingCmd = new SqlCommand("select CardNo from Member order by CardNo desc", GlobalClass.Connection);
             SqlDataReader data = MemberHandlingCmd.ExecuteReader();
-            
-            while(data.Read())
+            while (data.Read())
             {
                 int temp = Convert.ToInt32(data[0].ToString());
-                if (temp>LastNo)
+                if (temp > LastNo)
                     LastNo = temp;
             }
-            this.TextBoxHandlePerson.Text = "100000";
+            this.TextBoxHandlePerson.Text = GlobalClass.EmployeeNo;
             TextBoxHandleDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
@@ -53,7 +52,7 @@ namespace 洗浴中心会员管理系统
             if (TextBoxHandlePerson.Text != String.Empty && TextBoxHandleDate.Text != String.Empty &&
                 TextBoxName.Text != String.Empty && (RadioButtonMan.Checked != false || RadioButtonWoman.Checked != false) &&
                 TextBoxPassword.Text != String.Empty && TextBoxIDCardNo.Text != String.Empty && TextBoxTel.Text != String.Empty &&
-                TextBoxAddress.Text != String.Empty && TextBoxRechargeAmount.Text != String.Empty /*&& TextBoxRemark.Text != String.Empty*/)
+                TextBoxAddress.Text != String.Empty && TextBoxRechargeAmount.Text != String.Empty)
             {
                 try
                 {

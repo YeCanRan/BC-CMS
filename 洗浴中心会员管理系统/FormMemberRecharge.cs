@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,44 +44,44 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand MemberNoCmd = new SqlCommand("select CardNo,Password from Member", GlobalClass.Connection);
-                SqlDataReader data = MemberNoCmd.ExecuteReader();
-                int i = 0;
-                while (data.Read())
+                if (Regex.IsMatch(TextBoxCardNumber.Text, @"2\d{5}") && TextBoxPasswrod.Text != String.Empty)
                 {
-                    if (data[0].ToString() == TextBoxCardNumber.Text && data[1].ToString() == GlobalClass.MD5(TextBoxPasswrod.Text))
+                    SqlCommand MemberNoCmd = new SqlCommand("select CardNo,Password from Member", GlobalClass.Connection);
+                    SqlDataReader data = MemberNoCmd.ExecuteReader();
+                    int i = 0;
+                    while (data.Read())
                     {
-                        data.Close();
-                        SqlCommand RechargeCmd = new SqlCommand("Recharge", GlobalClass.Connection);
-                        RechargeCmd.CommandType = CommandType.StoredProcedure;
-                        RechargeCmd.Parameters.Add("@CardNo", SqlDbType.NChar, 6);
-                        RechargeCmd.Parameters.Add("@Password", SqlDbType.NChar, 32);
-                        RechargeCmd.Parameters.Add("Balance", SqlDbType.Int);
-                        RechargeCmd.Parameters[0].Value = TextBoxCardNumber.Text;
-                        RechargeCmd.Parameters[1].Value = GlobalClass.MD5(TextBoxPasswrod.Text);
-                        RechargeCmd.Parameters[2].Value = Convert.ToInt32(LabelPrice.Text);
-                        if (RechargeCmd.ExecuteNonQuery() == 1)
+                        if (data[0].ToString() == TextBoxCardNumber.Text && data[1].ToString() == GlobalClass.MD5(TextBoxPasswrod.Text))
                         {
-                            MessageBox.Show("提交成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            break;
+                            data.Close();
+                            SqlCommand RechargeCmd = new SqlCommand("Recharge", GlobalClass.Connection);
+                            RechargeCmd.CommandType = CommandType.StoredProcedure;
+                            RechargeCmd.Parameters.Add("@CardNo", SqlDbType.NChar, 6);
+                            RechargeCmd.Parameters.Add("@Password", SqlDbType.NChar, 32);
+                            RechargeCmd.Parameters.Add("@Balance", SqlDbType.Int);
+                            RechargeCmd.Parameters[0].Value = TextBoxCardNumber.Text;
+                            RechargeCmd.Parameters[1].Value = GlobalClass.MD5(TextBoxPasswrod.Text);
+                            RechargeCmd.Parameters[2].Value = Convert.ToInt32(LabelPrice.Text);
+                            if (RechargeCmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("提交成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                break;
+                            }
+                            else
+                                MessageBox.Show("提交失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        else
-                        {
-                            MessageBox.Show("提交失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        i++;
                     }
-                    /*else if (data[0].ToString() == TextBoxCardNumber.Text && data[1].ToString() != TextBoxPasswrod.Text)
-                    {
-                        MessageBox.Show("会员密码错误!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        //MessageBox.Show("会员卡号错误!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }*/
-                    i++;
+                    GlobalClass.Connection.Close();
+                    this.Close();
                 }
-                GlobalClass.Connection.Close();
-                this.Close();
+                else
+                {
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxCardNumber.Text = String.Empty;
+                    TextBoxPasswrod.Text = String.Empty;
+                    TextBoxCardNumber.Focus();
+                }
             }
             catch (Exception ex)
             {

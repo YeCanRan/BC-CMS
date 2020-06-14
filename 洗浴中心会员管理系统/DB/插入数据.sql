@@ -181,7 +181,7 @@ go
 --²åÈëÊÕÈëÖ§³ö
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('ÓªÒµ¶î','2019-1-31',0,590000,null)
 go
-insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-1-31',1,9000,null)
+insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-1-31',1,10000,null)
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-1-31',1,27000,null)
 go
@@ -189,7 +189,7 @@ insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('¹¤×Ê'
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('ÓªÒµ¶î','2019-2-28',0,575000,null)
 go
-insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-2-28',1,86000,null)
+insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-2-28',1,12000,null)
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-2-28',1,26000,null)
 go
@@ -255,7 +255,7 @@ insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('ÓªÒµ¶
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-10-31',1,18000,null)
 go
-insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-10-31',1,400000,null)
+insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-10-31',1,40000,null)
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('¹¤×Ê','2019-10-31',1,14400,null)
 go
@@ -263,7 +263,7 @@ insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('ÓªÒµ¶
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Ë®µç','2019-11-30',1,13000,null)
 go
-insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-11-30',1,350000,null)
+insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('Îï×Ê','2019-11-30',1,36000,null)
 go
 insert into Revenue(Class,Date,RevenuesOrExpenditure,Price,Remark) values('¹¤×Ê','2019-11-30',1,14400,null)
 go

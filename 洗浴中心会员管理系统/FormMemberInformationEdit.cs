@@ -29,7 +29,6 @@ namespace 洗浴中心会员管理系统
                 data.Read();
                 this.TextBoxHandlePerson.Text = data[8].ToString();
                 this.TextBoxHandleDate.Text = data[7].ToString().Substring(0, 9);
-                //this.TextBoxPassword.Text = data[1].ToString();
                 this.TextBoxName.Text = data[2].ToString();
                 if (data[3].ToString() == "男")
                 {

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,23 +27,28 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand AddLeafletCmd = new SqlCommand("AddLeaflet", GlobalClass.Connection);
-                AddLeafletCmd.CommandType = CommandType.StoredProcedure;
-                AddLeafletCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
-                AddLeafletCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
-                AddLeafletCmd.Parameters.Add("@Numbers", SqlDbType.Int);
-                AddLeafletCmd.Parameters[0].Value = LabelLeaflet.Text;
-                AddLeafletCmd.Parameters[1].Value = GlobalClass.EmployeeNo;
-                AddLeafletCmd.Parameters[2].Value = Convert.ToInt32(TextBoxNumbers.Text);
-                if (AddLeafletCmd.ExecuteNonQuery() == 1)
+                if (Regex.IsMatch(TextBoxNumbers.Text, @"\d+"))
                 {
-                    MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlCommand AddLeafletCmd = new SqlCommand("AddLeaflet", GlobalClass.Connection);
+                    AddLeafletCmd.CommandType = CommandType.StoredProcedure;
+                    AddLeafletCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
+                    AddLeafletCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
+                    AddLeafletCmd.Parameters.Add("@Numbers", SqlDbType.Int);
+                    AddLeafletCmd.Parameters[0].Value = LabelLeaflet.Text;
+                    AddLeafletCmd.Parameters[1].Value = GlobalClass.EmployeeNo;
+                    AddLeafletCmd.Parameters[2].Value = Convert.ToInt32(TextBoxNumbers.Text);
+                    if (AddLeafletCmd.ExecuteNonQuery() == 1)
+                        MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxNumbers.Text = String.Empty;
+                    TextBoxNumbers.Focus();
                 }
-                this.Close();
             }
             catch (Exception ex)
             {

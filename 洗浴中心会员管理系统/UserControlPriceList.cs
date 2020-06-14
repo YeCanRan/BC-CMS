@@ -25,7 +25,7 @@ namespace 洗浴中心会员管理系统
             {
                 if (!Regex.IsMatch(TextBoxPresentPrice.Text, @"\d+"))
                 {
-                    MessageBox.Show("内容不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TextBoxPresentPrice.Text = String.Empty;
                     TextBoxPresentPrice.Focus();
                 }
@@ -43,15 +43,14 @@ namespace 洗浴中心会员管理系统
                         PriceCmd.Parameters[0].Value = LabelName.Text;
                         PriceCmd.Parameters[1].Value = Convert.ToInt32(TextBoxPresentPrice.Text);
                         if (PriceCmd.ExecuteNonQuery() == 1)
-                        {
                             MessageBox.Show("更改成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
                         else
                             MessageBox.Show("更改失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        GlobalClass.Connection.Close();
                     }
                 }
             }

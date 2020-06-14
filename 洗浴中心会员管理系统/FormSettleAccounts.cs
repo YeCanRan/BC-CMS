@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,7 +30,7 @@ namespace 洗浴中心会员管理系统
                 int i = 0;
                 while (data.Read())
                 {
-                    ConsumerList.Add(new 洗浴中心会员管理系统.UserControlConsumerList(this.TextBoxConsumerNo,this.CheckBoxIsMember,this.TextBoxCardNo,this.LabelPrice));
+                    ConsumerList.Add(new 洗浴中心会员管理系统.UserControlConsumerList(this.TextBoxConsumerNo, this.CheckBoxIsMember, this.TextBoxCardNo, this.LabelPrice));
                     this.PanelConsumerList.Controls.Add((UserControlConsumerList)ConsumerList[i]);
                     this.PanelConsumerList.Controls.SetChildIndex((UserControlConsumerList)ConsumerList[i], 0);
                     ((UserControlConsumerList)ConsumerList[i]).Size = new System.Drawing.Size(1014, 58);
@@ -54,22 +55,6 @@ namespace 洗浴中心会员管理系统
                 }
                 data.Close();
                 GlobalClass.Connection.Close();
-                /*while (data.Read())
-                {
-                    ConsumerNumbers++;
-                }
-                for (int i = 0; i < ConsumerNumbers; i++)
-                {
-                    ConsumerList.Add(new 洗浴中心会员管理系统.UserControlConsumerList(this.LabelPrice));
-                    this.PanelConsumerList.Controls.Add((UserControlConsumerList)ConsumerList[i]);
-                    ((UserControlConsumerList)ConsumerList[i]).Size = new System.Drawing.Size(1014, 58);
-                    ((UserControlConsumerList)ConsumerList[i]).Dock = System.Windows.Forms.DockStyle.Top;
-                    ((UserControlConsumerList)ConsumerList[i]).Location = new System.Drawing.Point(0, 58 * i);
-                    ((UserControlConsumerList)ConsumerList[i]).Controls["LabelID"].Text = (ConsumerNumbers - i).ToString();
-                    ((UserControlConsumerList)ConsumerList[i]).Name = "ConsumerList" + i;
-                    if (i % 2 == 0)
-                        ((UserControlConsumerList)ConsumerList[i]).BackColor = Color.FromArgb(25, 20, 25);
-                }*/
             }
             catch (Exception ex)
             {
@@ -88,9 +73,7 @@ namespace 洗浴中心会员管理系统
             while (data.Read())
             {
                 if (TextBoxConsumerNo.Text == data[0].ToString())
-                {
                     TextBoxCardNo.Text = data[3].ToString();
-                }
             }
             data.Close();
             GlobalClass.Connection.Close();
@@ -107,16 +90,21 @@ namespace 洗浴中心会员管理系统
                 GlobalClass.Connection.Open();
                 if (CheckBoxIsMember.CheckState == CheckState.Unchecked)
                 {
-
-                    SqlCommand SettleAccountsCmd = new SqlCommand("select Price from ViewSettleAccounts where No=" + TextBoxConsumerNo.Text.ToString(), GlobalClass.Connection);
-                    LabelPrice.Text = SettleAccountsCmd.ExecuteScalar().ToString() + "元";
-                    GlobalClass.Connection.Close();
+                    if (Regex.IsMatch(TextBoxConsumerNo.Text, @"\d{3}") && TextBoxConsumerNo.TextLength <= 3)
+                    {
+                        SqlCommand SettleAccountsCmd = new SqlCommand("select Price from ViewSettleAccounts where No=" + TextBoxConsumerNo.Text.ToString(), GlobalClass.Connection);
+                        LabelPrice.Text = SettleAccountsCmd.ExecuteScalar().ToString() + "元";
+                        GlobalClass.Connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TextBoxConsumerNo.Text = String.Empty;
+                        TextBoxConsumerNo.Focus();
+                    }
                 }
                 else if (CheckBoxIsMember.CheckState == CheckState.Checked && TextBoxCardNo.Text != String.Empty && TextBoxCardNo.Text != "000000")
                 {
-                    /*if (GlobalClass.Connection.State == ConnectionState.Open)
-                        GlobalClass.Connection.Close();
-                    GlobalClass.Connection.Open();*/
                     SqlCommand SettleAccountsCmd = new SqlCommand("select Price from ViewSettleAccounts where No=" + TextBoxConsumerNo.Text.ToString() + " and CardNo=" + TextBoxCardNo.Text.ToString(), GlobalClass.Connection);
                     SqlDataReader data = SettleAccountsCmd.ExecuteReader();
                     data.Read();
@@ -126,9 +114,6 @@ namespace 洗浴中心会员管理系统
                 }
                 else if (CheckBoxIsMember.CheckState == CheckState.Checked && TextBoxCardNo.Text == "000000")
                 {
-                    /*if (GlobalClass.Connection.State == ConnectionState.Open)
-                        GlobalClass.Connection.Close();
-                    GlobalClass.Connection.Open();*/
                     SqlCommand SettleAccountsCmd = new SqlCommand("select Price from ViewSettleAccounts where No=" + TextBoxConsumerNo.Text.ToString() + " and CardNo=" + TextBoxCardNo.Text.ToString(), GlobalClass.Connection);
                     SqlDataReader data = SettleAccountsCmd.ExecuteReader();
                     data.Read();

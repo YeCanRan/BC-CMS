@@ -37,20 +37,19 @@ namespace 洗浴中心会员管理系统
                         MaterialCmd.Parameters[0].Value = LabelName.Text;
                         MaterialCmd.Parameters[1].Value = Convert.ToInt32(TextBoxIncrement.Text);
                         if (MaterialCmd.ExecuteNonQuery() == 1)
-                        {
                             MessageBox.Show("更改成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
                         else
                             MessageBox.Show("更改失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        GlobalClass.Connection.Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("内容不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TextBoxIncrement.Text = String.Empty;
                     TextBoxIncrement.Focus();
                 }

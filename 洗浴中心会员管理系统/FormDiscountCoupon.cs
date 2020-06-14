@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,25 +27,31 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand AddDiscountCouponCmd = new SqlCommand("AddDiscountCoupon",GlobalClass.Connection);
-                AddDiscountCouponCmd.CommandType = CommandType.StoredProcedure;
-                AddDiscountCouponCmd.Parameters.Add("@Class",SqlDbType.VarChar,8);
-                AddDiscountCouponCmd.Parameters.Add("@Discount",SqlDbType.Int);
-                AddDiscountCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
-                AddDiscountCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
-                AddDiscountCouponCmd.Parameters[0].Value = LabelDiscountCoupon.Text;
-                AddDiscountCouponCmd.Parameters[1].Value = Convert.ToInt32(TextBoxDiscount.Text);
-                AddDiscountCouponCmd.Parameters[2].Value = GlobalClass.EmployeeNo;
-                AddDiscountCouponCmd.Parameters[3].Value = Convert.ToInt32(TextBoxNumbers.Text);
-                if (AddDiscountCouponCmd.ExecuteNonQuery() == 1)
+                if (Regex.IsMatch(TextBoxDiscount.Text, @"\d{1,2}") && Regex.IsMatch(TextBoxNumbers.Text, @"\d+"))
                 {
-                    MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlCommand AddDiscountCouponCmd = new SqlCommand("AddDiscountCoupon", GlobalClass.Connection);
+                    AddDiscountCouponCmd.CommandType = CommandType.StoredProcedure;
+                    AddDiscountCouponCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
+                    AddDiscountCouponCmd.Parameters.Add("@Discount", SqlDbType.Int);
+                    AddDiscountCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
+                    AddDiscountCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
+                    AddDiscountCouponCmd.Parameters[0].Value = LabelDiscountCoupon.Text;
+                    AddDiscountCouponCmd.Parameters[1].Value = Convert.ToInt32(TextBoxDiscount.Text);
+                    AddDiscountCouponCmd.Parameters[2].Value = GlobalClass.EmployeeNo;
+                    AddDiscountCouponCmd.Parameters[3].Value = Convert.ToInt32(TextBoxNumbers.Text);
+                    if (AddDiscountCouponCmd.ExecuteNonQuery() == 1)
+                        MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxDiscount.Text = String.Empty;
+                    TextBoxNumbers.Text = String.Empty;
+                    TextBoxDiscount.Focus();
                 }
-                this.Close();
             }
             catch (Exception ex)
             {

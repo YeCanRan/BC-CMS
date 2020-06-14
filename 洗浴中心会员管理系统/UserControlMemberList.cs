@@ -36,13 +36,9 @@ namespace 洗浴中心会员管理系统
                 DeleteMemberCmd.Parameters.Add("@CardNo", SqlDbType.NChar, 6);
                 DeleteMemberCmd.Parameters[0].Value = LabelMemberNo.Text.Substring(7);
                 if (DeleteMemberCmd.ExecuteNonQuery() == 1)
-                {
                     MessageBox.Show("删除成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else
-                {
                     MessageBox.Show("删除失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
         }
     }

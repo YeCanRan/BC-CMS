@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,69 +55,36 @@ namespace 洗浴中心会员管理系统
                 MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 GlobalClass.Connection.Close();
             }
-
-            /*int MemberNumbers = 30;
-            for (int i = 0; i < MemberNumbers; i++)
-            {
-                MemberList.Add(new 洗浴中心会员管理系统.UserControlMemberList());
-                this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
-                ((UserControlMemberList)MemberList[i]).Size = new System.Drawing.Size(1014, 58);
-                ((UserControlMemberList)MemberList[i]).Dock = System.Windows.Forms.DockStyle.Top;
-                ((UserControlMemberList)MemberList[i]).Location = new System.Drawing.Point(0, 58 * i);
-                ((UserControlMemberList)MemberList[i]).Name = "MemberList" + i;
-                if (i % 2 == 0)
-                    ((UserControlMemberList)MemberList[i]).BackColor = Color.FromArgb(25, 20, 25);
-            }*/
         }
 
         private void ButtonSearchByCardNo_Click(object sender, EventArgs e)
         {
             try
             {
-                //int i = 0;
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SearchByCardNoCmd = new SqlCommand("select * from ViewMemberInformation where CardNo=" + TextBoxCardNo.Text, GlobalClass.Connection);
-                SqlDataReader data = SearchByCardNoCmd.ExecuteReader();
-                data.Read();
-                //MessageBox.Show(data[0].ToString(), "");
-                for (int i = 0; i < MemberList.Count; i++)
+                if (Regex.IsMatch(TextBoxCardNo.Text, @"2\d{5}"))
                 {
-                    //MessageBox.Show("Mark"+i, "消息");
-                    if (((UserControlMemberList)MemberList[i]).Controls["LabelMemberNo"].Text.Substring(7) == data[0].ToString())
-                    {
-                        //MessageBox.Show("Mark!");
-                        this.PanelMemberList.Controls.Clear();
-                        this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
-                    }
-                }
-                data.Close();
-                /*while (data.Read())
-                {
-                    if (((UserControlMemberList)MemberList[i]).Controls["LabelMemberNo"].Text == data[0].ToString())
-                    {
-                        MessageBox.Show("Mark1!", "消息");
-                        this.PanelMemberList.Controls.Clear();
-                        this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
-                    }
-                    i++;
-                    MessageBox.Show("Mark" + i.ToString(), "消息");
-                }
-                MessageBox.Show("检索失败!", "消息");*/
-                /*foreach (var member in MemberList)
-                {
+                    SqlCommand SearchByCardNoCmd = new SqlCommand("select * from ViewMemberInformation where CardNo=" + TextBoxCardNo.Text, GlobalClass.Connection);
+                    SqlDataReader data = SearchByCardNoCmd.ExecuteReader();
                     data.Read();
-                    if (((UserControlMemberList)member).Controls["LabelMemberNo"].Text == data[0].ToString())
+                    for (int i = 0; i < MemberList.Count; i++)
                     {
-                        //(MemberList[i])
-                        for (int j = 0; j != i; j++)
+                        if (((UserControlMemberList)MemberList[i]).Controls["LabelMemberNo"].Text.Substring(7) == data[0].ToString())
                         {
-                            ((UserControlMemberList)MemberList[j]).Hide();
+                            this.PanelMemberList.Controls.Clear();
+                            this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
                         }
                     }
-                    i++;
-                }*/
+                    data.Close();
+                }
+                else
+                {
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxCardNo.Text = String.Empty;
+                    TextBoxCardNo.Focus();
+                }
             }
             catch (Exception ex)
             {
@@ -133,18 +101,27 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand SearchByTelCmd = new SqlCommand("select * from ViewMemberInformation where Tel=" + TextBoxTel.Text, GlobalClass.Connection);
-                SqlDataReader data = SearchByTelCmd.ExecuteReader();
-                data.Read();
-                for (int i = 0; i < MemberList.Count; i++)
+                if (Regex.IsMatch(TextBoxTel.Text, @"1\d{10}"))
                 {
-                    if (((UserControlMemberList)MemberList[i]).Controls["LabelTel"].Text.Substring(7) == data[3].ToString())
+                    SqlCommand SearchByTelCmd = new SqlCommand("select * from ViewMemberInformation where Tel=" + TextBoxTel.Text, GlobalClass.Connection);
+                    SqlDataReader data = SearchByTelCmd.ExecuteReader();
+                    data.Read();
+                    for (int i = 0; i < MemberList.Count; i++)
                     {
-                        this.PanelMemberList.Controls.Clear();
-                        this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
+                        if (((UserControlMemberList)MemberList[i]).Controls["LabelTel"].Text.Substring(7) == data[3].ToString())
+                        {
+                            this.PanelMemberList.Controls.Clear();
+                            this.PanelMemberList.Controls.Add((UserControlMemberList)MemberList[i]);
+                        }
                     }
+                    data.Close();
                 }
-                data.Close();
+                else
+                {
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxTel.Text = String.Empty;
+                    TextBoxTel.Focus();
+                }
             }
             catch (Exception ex)
             {

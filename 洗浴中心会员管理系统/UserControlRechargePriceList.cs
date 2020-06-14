@@ -21,7 +21,7 @@ namespace 洗浴中心会员管理系统
 
         private void ButtonChoose_Click(object sender, EventArgs e)
         {
-            TempRef.Text = this.LabelRechargePrice.Text;
+            TempRef.Text = (Convert.ToInt32(this.LabelRechargePrice.Text) + Convert.ToInt32(this.LabelGiftPrice.Text)).ToString();
         }
     }
 }

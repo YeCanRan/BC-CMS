@@ -28,6 +28,7 @@ namespace 洗浴中心会员管理系统
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                GlobalClass.Connection.Close();
             }
             finally
             {
@@ -143,7 +144,7 @@ namespace 洗浴中心会员管理系统
             {
                 this.TimerProgressBar.Stop();
                 this.DialogResult = DialogResult.OK;
-            };
+            }
         }
 
         private void TextBoxAccount_KeyDown(object sender, KeyEventArgs e)

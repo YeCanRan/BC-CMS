@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,25 +27,34 @@ namespace 洗浴中心会员管理系统
                 if (GlobalClass.Connection.State == ConnectionState.Open)
                     GlobalClass.Connection.Close();
                 GlobalClass.Connection.Open();
-                SqlCommand AddCashCouponCmd = new SqlCommand("AddCashCoupon", GlobalClass.Connection);
-                AddCashCouponCmd.CommandType = CommandType.StoredProcedure;
-                AddCashCouponCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
-                AddCashCouponCmd.Parameters.Add("@Equivalent", SqlDbType.Int);
-                AddCashCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
-                AddCashCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
-                AddCashCouponCmd.Parameters[0].Value = LabelCashCoupon.Text;
-                AddCashCouponCmd.Parameters[1].Value = Convert.ToInt32(TextBoxEquivalent.Text);
-                AddCashCouponCmd.Parameters[2].Value = GlobalClass.EmployeeNo;
-                AddCashCouponCmd.Parameters[3].Value = Convert.ToInt32(TextBoxNumbers.Text);
-                if (AddCashCouponCmd.ExecuteNonQuery() == 1)
+
+                if (Regex.IsMatch(TextBoxEquivalent.Text, @"\d+") && Regex.IsMatch(TextBoxNumbers.Text, @"\d+"))
                 {
-                    MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlCommand AddCashCouponCmd = new SqlCommand("AddCashCoupon", GlobalClass.Connection);
+                    AddCashCouponCmd.CommandType = CommandType.StoredProcedure;
+                    AddCashCouponCmd.Parameters.Add("@Class", SqlDbType.VarChar, 8);
+                    AddCashCouponCmd.Parameters.Add("@Equivalent", SqlDbType.Int);
+                    AddCashCouponCmd.Parameters.Add("@HandlePerson", SqlDbType.Char, 6);
+                    AddCashCouponCmd.Parameters.Add("@Numbers", SqlDbType.Int);
+                    AddCashCouponCmd.Parameters[0].Value = LabelCashCoupon.Text;
+                    AddCashCouponCmd.Parameters[1].Value = Convert.ToInt32(TextBoxEquivalent.Text);
+                    AddCashCouponCmd.Parameters[2].Value = GlobalClass.EmployeeNo;
+                    AddCashCouponCmd.Parameters[3].Value = Convert.ToInt32(TextBoxNumbers.Text);
+                    if (AddCashCouponCmd.ExecuteNonQuery() == 1)
+                        MessageBox.Show("添加成功,请刷新页面!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("添加失败!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("输入不合法!", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxEquivalent.Text = String.Empty;
+                    TextBoxNumbers.Text = String.Empty;
+                    TextBoxEquivalent.Focus();
                 }
-                this.Close();
+
+
             }
             catch (Exception ex)
             {

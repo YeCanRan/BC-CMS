@@ -93,6 +93,7 @@
             this.TextBoxTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxTel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxTel.Location = new System.Drawing.Point(480, 40);
+            this.TextBoxTel.MaxLength = 11;
             this.TextBoxTel.Name = "TextBoxTel";
             this.TextBoxTel.Size = new System.Drawing.Size(168, 19);
             this.TextBoxTel.TabIndex = 3;
@@ -129,6 +130,7 @@
             this.TextBoxCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxCardNo.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TextBoxCardNo.Location = new System.Drawing.Point(105, 40);
+            this.TextBoxCardNo.MaxLength = 6;
             this.TextBoxCardNo.Name = "TextBoxCardNo";
             this.TextBoxCardNo.Size = new System.Drawing.Size(168, 19);
             this.TextBoxCardNo.TabIndex = 1;
